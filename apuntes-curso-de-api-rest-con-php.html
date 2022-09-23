@@ -1,0 +1,2480 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    <title>Curso de API REST con PHP</title>
+    <style>
+        img {
+            max-width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-center">
+        <h1>Curso de API REST con PHP</h1>
+    </header>
+    <main class="container">
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 1 de 19 - Qué aprenderás sobre API REST</h2>
+                <div class="Resources-description">
+                    <p>¡Bienvenido al curso de API REST! En este curso tu profesor Mauro Chojrin, desarrollador desde
+                        1997 y líder de equipos, te enseñará cómo conectar tus aplicaciones con las de otras personas.
+                    </p>
+                    <p>Durante el curso utilizaremos el lenguaje PHP, pero no te preocupes pues todo lo que aprendas
+                        puede ser aplicado a cualquier lenguaje que utilices. En la siguiente clase verás <a
+                            href="https://platzi.com/clases/1638-api-rest/21611-que-significa-rest-y-que-es-una-api-restful/"
+                            target="_blank" rel=" noopener">qué es una API REST.</a></p>
+                </div>
+                <h2>TRANSCRIPCION</h2>
+                <div class="Transcript-text">
+                    <p>Hola, soy Mauro Chojin y seré tu profe en este curso de Happy Ruiz Con Este curso aprenderás cómo
+                        calentar</p>
+                    <p>tus aplicaciones con las de otras personas, por ejemplo, para incorporar pasarelas de pagos o
+                    </p>
+                    <p>en tomar información de otros sistemas. En fin, es realmente mucho lo que podrás lograr con los
+                        contenidos </p>
+                    <p>que aprenderás aquí durante el curso. Utilizaremos el lenguaje PHP, pero no es necesario que lo
+                        domines </p>
+                    <p>en profundidades. Aquellas técnicas que aprenderás son aplicables a cualquier lenguaje El </p>
+                    <p>curso está diseñado para hacer tomado por estudiantes y profesionales que si tienes algo de
+                        experiencia </p>
+                    <p>te ayuda, pero tampoco es realmente necesario. Te cuento un poco sobre mi. </p>
+                    <p>Mi nombre es Ya te lo dije, soy docente y consultor THP. </p>
+                    <p>Sigo trabajando en la industria y tires el año mil novecientos noventa y siete. </p>
+                    <p>He sido desarrollado el arquitecto Días de equipos y hoy me desarrolló en forma independiente.
+                    </p>
+                    <p>Conecta conmigo en Twiter. Así podemos seguir la discusión por así arroba ME Chojin y </p>
+                    <p>te veo en el curso </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 2 de 19 - Que es un aPI y para que sirve</h2>
+                <div class="Transcript-text">
+                    <p>Hola, soy Mauro ocho. Crin CD tu profe en este curso de Res- Help Ibais, donde aprenderás cómo
+                    </p>
+                    <p>calentar tus aplicaciones con las de terceros. En esta clase, aprenderás cuál </p>
+                    <p>es el concepto de pie hay y las herramientas que utilizaremos a lo largo del curso. </p>
+                    <p>Empecemos por la definición, que es una Hyypia hay Help y ahí son siglas de aplicación </p>
+                    <p>programa Interface o interfaz de programación de aplicaciones Se trata básicamente de un </p>
+                    <p>conjunto de reglas que definen como dos aplicaciones intelectual entre si, es decir, por ejemplo,
+                    </p>
+                    <p>quien inicia la comunicación, que tipos de mensajes se envían, cuáles son las respuestas que se
+                        deben </p>
+                    <p>esperar? Etcétera cien. El concepto de pie ahí está muy fuertemente relacionado actualmente </p>
+                    <p>a los servicios web. En realidad es un concepto que viene acompañando la programación desde hace
+                    </p>
+                    <p>muchos años. Por ejemplo, en el caso de programación orientada a objetos, pensamos que la Hyppia
+                    </p>
+                    <p>y es el conjunto de todos los miembros públicos que ofrece una clase, es decir, las propiedades
+                    </p>
+                    <p>y las funciones que ofrece a los otros objetos para que puedan utilizar sus servicios. </p>
+                    <p>A continuación hablaremos un poco de las herramientas que utilizaremos durante el curso y </p>
+                    <p>los conocimientos que sería bueno que tengas. Al tomarlo Para empezar, debes tener una noción
+                        básica </p>
+                    <p>de programación. Si todavía no la tienes, puedes tomar el curso de Platzi, donde aprenderán los
+                        conceptos </p>
+                    <p>básicos. Luego utilizaremos el lenguaje PHP, aunque no es necesario que lo domines completamente
+                    </p>
+                    <p>porque los conceptos que verás se aplican a cualquier lenguaje de programación. </p>
+                    <p>Si será importante que tengas el intérprete de PHP instalado para poder ejecutar </p>
+                    <p>los ejemplos, luego trabajaremos Connaught punto de ese H para hacer el jeep lament de </p>
+                    <p>vuelta. Si no conoces esta herramienta, pues tomas el curso de Platzi Donde, aprenderas
+                        perfectamente </p>
+                    <p>cómo utilizarla. Yo voy a estar utilizando Visual Studio Code para mostrar el código, pero puedes
+                    </p>
+                    <p>utilizar cualquier entorno que sea de tu agrado o incluso archivos de texto. </p>
+                    <p>Como prefieras Utilizaremos también la herramienta se guarde le que sirve para realizar pedidos
+                        http </p>
+                    <p>a través de la línea de comandos, una herramienta llamada J Q que permite mostrar </p>
+                    <p>textos. Seis son en un formato más agradable y por último, utilizar en mi navegador, que es muy
+                        Kron </p>
+                    <p>pero puedes utilizar el que quieras si necesitas ayuda para instalar las herramientas cuentas
+                    </p>
+                    <p>con una lectura donde podrás ver todo el detalle de cómo se instalan. </p>
+                    <p>Así que te veo en el curso. Si te interesa aprender más sobre el resto y pillais, no dejes de
+                        anotar </p>
+                    <p>te en el curso donde aprenderás cómo conectar tus aplicaciones con las de terceros, como permitir
+                        a </p>
+                    <p>otros tomar datos de tus aplicaciones y una gran cantidad de otras cosas. </p>
+                    <p>Así que Suscribete ahora mismo haciendo click aquí Si quieres ver más contenido relacionado,
+                        puedes </p>
+                    <p>ver los videos que se encuentran por aquí. Y por último, obviamente no te olvide CD suscribirte a
+                    </p>
+                    <p>Platzi aquí. </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 3 de 19 - Que es el protocolo HTTP y como funciona</h2>
+                <div class="Resources-description">
+                    <p><strong>HTTP</strong> (Hypertext Transfer Protocol), en español: Protocolo de Transferencia de
+                        Hipertexto, <strong>es el protocolo por excelencia de transferencia para el hipertexto</strong>.
+                        Por lo tanto, es el enlace de normas para transportar archivos de texto, imágenes, gráficas,
+                        sonido, video y otros tipos de archivos multimedia que pueden ser consumidos en la <a
+                            href="https://developer.mozilla.org/en-US/docs/Glossary/World_Wide_Web" target="_blank"
+                            rel=" noopener">World Wide Web</a>.</p>
+                    <p>Desde el primer momento en que abres el navegador de tu preferencia, estás consumiendo este
+                        protocolo, ya que el navegador es un consumidor HTTP, que envía solicitudes a diferentes
+                        servidores y retorna la respuesta de estos al usuario final, o sea tú o cualquier persona que
+                        navegue en internet.</p>
+                    <h2>Qué es HTTP</h2>
+                    <p>Es un protocolo de comunicación entre aplicaciones basado en el intercambio de texto. El
+                        protocolo HTTP es el que impulsa todo internet. Los navegadores web utilizan este protocolo para
+                        solicitar páginas web a los servidores. El servidor devuelve todos los datos necesarios en
+                        código HTML para que puedan mostrarse en el navegador.</p>
+                    <h2>Qué es un protocolo</h2>
+                    <p>Es conjunto de reglas en las que se van a comunicar dos entidades, en este caso dos computadoras.
+                        El modelo <strong>TCP/IP</strong> nos permite esta comunicación entre computadoras.</p>
+                    <h2>Cómo funciona el protocolo HTTP</h2>
+                    <p>Así como los humanos nos comunicamos a través del lenguaje, las computadoras se pueden comunicar
+                        a través de HTTP gracias al modelo de TCP/IP.</p>
+                    <p>Las reglas principales de HTTP se suelen definir por los <em>headers</em>, que se dividen en dos
+                        grupos: los <em>headers</em> de petición y los headers de respuesta:</p>
+                    <h3>Header request (petición)</h3>
+                    <p>Suelen estar definidos por el método de petición, hacia donde se hará el <em>request</em>, y la
+                        información que enviará la petición.</p>
+                    <h3>Header response (respuesta)</h3>
+                    <p>Suele estar definido principalmente por la respuesta del servidor y también por las
+                        características de la respuesta.</p>
+                    <p>**Así funciona el protocolo HTTP:</p>
+                    <ol>
+                        <li>El cliente envía una petición, se transmite por internet.</li>
+                        <li>El servidor recibe la petición y genera una respuesta, la envía.</li>
+                        <li>El cliente recibe la respuesta (y si estamos en el navegador, interpreta lo recibido).</li>
+                    </ol>
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/Como_Funciona_Protocolo_HTTP-0ba10017-e838-4120-b97f-b47f1aeec118.jpg"
+                            alt="Como_Funciona_Protocolo_HTTP.png"></figure>
+                    <h2>Características del protocolo HTTP</h2>
+                    <p>Las características principales del protocolo HTTP son:</p>
+                    <h3>1. Conexión única</h3>
+                    <p>Desde la versión 2.0 de HTTP, este usa una conexión única para generar múltiples solicitudes y
+                        respuestas en paralelo, lo cual a la hora de procesar las solicitudes genera una eficiencia
+                        mayor en la respuesta.</p>
+                    <h3>2. Elimina la información redundante</h3>
+                    <p>Al eliminar la información redundante se busca evitar el envío de datos repetidos durante una
+                        misma conexión, así se consigue un menor consumo de recursos y, por lo tanto, se obtiene una
+                        menor latencia.</p>
+                    <h3>3. Tiene multiplexación</h3>
+                    <p>Al ser un protocolo multiplexado, puede enviar y recibir varios mensajes al mismo tiempo,
+                        optimizando la comunicación. Esta característica mejora considerablemente la velocidad de carga.
+                    </p>
+                    <h3>4. Es un protocolo binario</h3>
+                    <p>HTTP trabaja mediante tramas y al ser un protocolo binario facilita encontrar el comienzo y el
+                        final de cada <em>frame,</em> lo cual al ser un protocolo de texto podría llegar a ser
+                        complicado de identificar. Adicionalmente, los protocolos binarios son más simples, por lo que
+                        tienden a ser menos propensos a errores.</p>
+                    <h3>5. Servicio <em>server push</em></h3>
+                    <p>Este servicio de HTTP se basa en estimaciones con las que el servir es capaz de enviar
+                        información al usuario antes de que esta sea solicitada para conseguir que la información esté
+                        disponible de forma inmediata.</p>
+                    <h3>6. Compresión de cabeceras</h3>
+                    <p>En versiones anteriores, dados los requerimientos de las solicitudes, las cabeceras tenían un
+                        tamaño considerable, lo cual aumentaba el tiempo para obtener respuestas. A partir de la versión
+                        2.0 las cabeceras empezaron a ser comprimidas para mejorar la eficiencia en la respuesta
+                        haciendo uso de un algoritmo simple y poco flexible llamdo HPACK.</p>
+                    <h3>7. Priorización de flujos</h3>
+                    <p>Un mensaje HTTP se puede dividir en múltiples fragmentos al ir desde el cliente hasta el servidor
+                        o viceversa y el orden en que lleguen a su destino es fundamental, es por eso que a cada flujo
+                        de le puede asignar un peso que va desde 1 hasta 256 y una dependencia. Haciendo uso de las
+                        prioridades y dependencias el protocolo crea un árbol de prioridades para los mensajes y
+                        solicitudes.</p>
+                    <h2>Ejemplo de protocolo HTTP</h2>
+                    <p>Para este ejemplo, vamos a emplear la terminal de comandos de tu computador. Si tienes Windows,
+                        puedes encontrarla simplemente buscando “CMD” en la barra de búsqueda de Windows.</p>
+                    <p>Ya dentro de la terminal, vamos a usar el comando curl:</p>
+                    <pre><code>curl  <span class="hljs-string">https:</span><span class="hljs-comment">//platzi.com</span>
+                </code></pre>
+                    <p>Al ejecutar el comando, estamos enviando una solicitud HTTP al servidor, que nos enviará todo el
+                        código HTML del sitio web. Si queremos ver solamente los encabezados, usamos el modificador -v
+                    </p>
+                    <pre><code>curl <span class="hljs-string">https:</span><span class="hljs-comment">//platzi.com -v </span>
+                </code></pre>
+                    <p>Utilizamos redirección (&gt;) para no observar todo el HTML. Acá tenemos una redirección de
+                        salida</p>
+                    <pre><code>curl <span class="hljs-string">https:</span><span class="hljs-comment">//platzi.com -v &gt; /dev/null</span>
+                </code></pre>
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/Protocolo_HTTP-34df9c34-a8e4-40ac-8572-38c0e6cabb00.jpg"
+                            alt="Protocolo_HTTP.png"></figure>
+                    <p><em>Contribución creada con los aportes de: <strong>Jose Daniel Barría Reyes, Alex Camacho y
+                                Angel de Jesus Quintero Pereira</strong></em></p>
+                </div>
+                <h2>TRANSCRIPCION</h2>
+                <div class="Transcript-text">
+                    <p>En esta clase, aprenderás los conceptos principales del resto.</p>
+                    <p>Es muy importante que prestes atención porque todo el resto del curso sean Push. </p>
+                    <p>Será sobre los conceptos que verás a continuación. </p>
+                    <p>No podemos realmente hablar de red sin hablar de http porque es la base de todo red </p>
+                    <p>sea posa muy fuertemente en http así que qué es exactamente http Pues http son si las de Ay </p>
+                    <p>por Text Franzo el protocolo o protocolo de transferencia de hipertexto Entonces </p>
+                    <p>Empezamos por definir qué es un protocolo que el concepto es bastante similar al de Help </p>
+                    <p>Y ahí se trata de un conjunto de reglas que definen como se hará la comunicación entre dos
+                        entidades </p>
+                    <p>en el caso de http se trata la DE computadoras. Luego un hipertexto Se trata de sencillamente
+                    </p>
+                    <p>un texto que contiene referencias a otros textos distintos, o sea, enlaces o Linux </p>
+                    <p>Pensemos un poco. Entonces, cómo funciona la comunicación oral? </p>
+                    <p>Como lo que está sucediendo en este momento, que es so Estoy moviendo mis cuerdas vocales. </p>
+                    <p>Eso produce un sonido que se transmite a través del aire. </p>
+                    <p>Es, o sea, a tus oídos se mueven los tímpanos y de alguna manera sea sea del mensaje hacia </p>
+                    <p>ti ahora claramente con eso solo no alcanza para comprender cómo es que nos estamos comunicando.
+                    </p>
+                    <p>Lo que nos falta es pensar en el idioma que compartimos, que es el español, que tiene sus reglas,
+                    </p>
+                    <p>sus reglas gramaticales, sintácticas, etcétera. </p>
+                    <p>Dado que nosotros tenemos esas reglas en común, lo que eso estoy diciendo, tú lo puedes
+                        interpretar </p>
+                    <p>y el mensaje sea efectivamente hacia el otro lado. </p>
+                    <p>El paralelo con http es justamente este http sería el español en nuestro caso. </p>
+                    <p>Y lo que hay por debajo es TCP Wipe. Qué es lo que posibilita que los gays salgan </p>
+                    <p>de mi computadora y siguen al abuso? Entonces, cómo funciona exactamente? </p>
+                    <p>Http Pues esto es lo que sucede cuando tuvo Ingresa San cualquier sitio, por ejemplo, el de Place
+                    </p>
+                    <p>Tu computadora envía un mensaje siendo las reglas de http Este mensaje se transmite a </p>
+                    <p>través de Internet y llegan a otra computadora que es un servidor Su objetivo es </p>
+                    <p>interpretar ese http procesarlo, generar una respuesta y enviarla a través de Internet. </p>
+                    <p>Siempre siendo las reglas de http Esta respuesta viajará. </p>
+                    <p>Se dará hasta tu computadora y lo que hará tu computadora más específicamente, tu navegador será
+                    </p>
+                    <p>interpretar ese http. Usualmente será HTML que es un texto Vim mostrarlo de un modo que sea
+                        agradable </p>
+                    <p>para ti. Por ejemplo, mostrando imágenes, textos en negrita y demás. </p>
+                    <p>Vamos a ver qué sucede exactamente. Cuando apuntas tu navegador al sitio de Platzi Para </p>
+                    <p>empezar para poder ver bien esto. Voy a abrir la consola del navegador con el botón derecho. </p>
+                    <p>Vamos a inspeccionar Y esto tal vez Salas has hecho, pero te voy a mostrar una pestaña que tal
+                        vez </p>
+                    <p>sea una novedad y es la de actuar con La de transferencia de red. </p>
+                    <p>Tonces lo que vamos a ver ahora voy a recargar la página y lo que vamos a ver son </p>
+                    <p>todas las peticiones que hace el cliente hacia el servidor y que obtiene como respuesta Esta </p>
+                    <p>atención, aquí nota la cantidad de peticiones que se están haciendo solamente para que tú puedas
+                        ver </p>
+                    <p>esta pagina con toda su gráfica y su diseño. Vamos a ver, por ejemplo, la petición principal, que
+                    </p>
+                    <p>es la que origina todo esto, que es el pedido al Platzi punto com. </p>
+                    <p>Lo primero que quiero que veas es esta pestaña de géneros encabezados. </p>
+                    <p>Todo esto muy probablemente no los has visto nunca, pero forma parte de la comunicación entre el
+                        cliente </p>
+                    <p>y el servidor Esto es exactamente el envío de comandos http como por ejemplo este que es un gueto
+                        y </p>
+                    <p>aquí nos dice que el valor de respuesta fue dos cientos Esto significa que todo </p>
+                    <p>salió bien. Aquí podemos ver más encabezados Y la respuesta CTO comunicación a </p>
+                    <p>nivel http y luego podemos ver la efectivamente, La respuesta que envió el servidor </p>
+                    <p>que es montón de texto que contendrá htm l Hughes que todo lo que sea necesario y </p>
+                    <p>muy probablemente esté incluso también pedidos sucesivos. </p>
+                    <p>Qué es lo que vemos aquí? Por ejemplo, este Juan Signal ese de Camp. </p>
+                    <p>Alguien lo está pidiendo Este. Segundo pedido. Es parte de lo que el navegador ha </p>
+                    <p>hecho al interpretar el código recibido es hacer un segundo pedido que, como puedes ver, también
+                        devuelve </p>
+                    <p>código y tiene sus propios encabezados. Vamos a repetir el mismo pedido, pero esta vez lo haremos
+                    </p>
+                    <p>desde el año de comandos. Para eso utilizaremos la herramienta CEO rm le su uso básico es muy
+                        sencillo </p>
+                    <p>Solamente. Hay que escribir la URL del sitio al que queremos conectarnos y pues </p>
+                    <p>ahí recibimos todo el HTML del sitio Esto. Es lo mismo que sucede en tu navegador. </p>
+                    <p>Solamente que el navegador va un paso más allá que es interpretar este HTML y dibujarlo en cómo
+                        se lo </p>
+                    <p>vimos. Ahora. Imaginemos que so- quiero Bueno, un poco más como ser los encabezados que se
+                        intercambian </p>
+                    <p>para eso Utilizaré el modificador menos B y voy a hacer una redirección de la salida hacia </p>
+                    <p>pues la nada misma La idea aquí es que no quiero saber el HTML en sino que solamente quiero ver
+                        los </p>
+                    <p>encabezados. Y ahí los vemos tonces Aquí vemos Los primeros encabezados Son Estos </p>
+                    <p>los que inician con el signo más horas son los que se han enviado hacia el servidor. </p>
+                    <p>Y los que inician con el signo menor son los que el servidor nos ha devuelto. </p>
+                    <p>Si Pues, imagina todo el trabajo que tiene el navegador para interpretar todo esto. </p>
+                    <p>Pues bien, ahora que compren diste los conceptos básicos de http Es hora de meternos en serio?
+                    </p>
+                    <p>En resto te espero en la próxima clase. </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 1 de 19 - Qué es una API REST y qué es REST</h2>
+                <div class="Resources-description">
+                    <p>API REST es una API diseñada bajo los principios de REST y es útil para interacciones simples. En
+                        otras palabras, son el puente de comunicación entre frontend y backend.</p>
+                    <p><strong>REST</strong>&nbsp;es un acrónimo que significa&nbsp;<strong>Representational State
+                            Transfer</strong>&nbsp;o transferencia de estado representacional en español.</p>
+                    <h2>Qué es una API REST o API RESTful</h2>
+                    <p>Una API RESTful es una interfaz que utiliza los principios de REST para comunicarse hacia y desde
+                        un servidor. El principio más importante en las APIs RESTful es el uso de los métodos HTTP:</p>
+                    <ul>
+                        <li>GET</li>
+                        <li>POST</li>
+                        <li>PUT</li>
+                        <li>DELETE</li>
+                    </ul>
+                    <p>Estos métodos son empleados por los clientes para crear, manipular y eliminar datos en los
+                        servidores, respectivamente.</p>
+                    <h3>Tabla de métodos sobre API REST</h3>
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/REST-65e4240f-662b-406e-91c9-57d8b0dd56f4-8f3dbe2f-62b7-4991-a5aa-db4a71418204.jpg"
+                            alt="REST-tabla-metodos.jpg"></figure>
+                    <p>Antes de entrar en más detalle sobre el concepto, entendamos qué es una API.</p>
+                    <blockquote>
+                        <p>Conoce más sobre <a
+                                href="https://platzi.com/clases/1912-intro-elasticsearch/28689-verbos-http/"
+                                target="_blank" rel=" noopener">verbos HTTP.</a></p>
+                    </blockquote>
+                    <h3>Qué es una API</h3>
+                    <p>La palabra&nbsp;<strong>API</strong>&nbsp;es un acrónimo que significa&nbsp;<strong>Interfaz de
+                            Programación de Aplicaciones</strong>&nbsp;(Application Programming Interface). Es un
+                        sistema que funciona como intermediario entre diferentes aplicaciones de software y su función
+                        es permitir que estas aplicaciones puedan comunicarse entre sí. Cada vez que usas una app como
+                        WhatsApp, Instagram o Facebook, estás usando una API sin saberlo.</p>
+                    <h2>Elementos de una API REST o API RESTful</h2>
+                    <p>Para que una API sea REST esta debe de funcionar bajo tres conceptos:</p>
+                    <ul>
+                        <li><strong>Recurso:</strong> todo dentro de una API RESTful debe ser un recurso.</li>
+                        <li><strong>URI:</strong> los recursos en REST siempre se manipulan a partir de la URI,
+                            identificadores universales de recursos.</li>
+                        <li><strong>Acción:</strong> todas las peticiones a tu API RESTful deben estar asociadas a uno
+                            de los verbos de HTTP: GET para obtener un recurso, POST para escribir un recurso, PUT para
+                            modificar un recurso y DELETE para borrarlo.</li>
+                    </ul>
+                    <h2>Qué es REST</h2>
+                    <p>REST es un estilo de arquitectura de software enfocado en el intercambio de recursos y basado en
+                        HTTP. Le agrega una capa muy delgada de complejidad y abstracción a HTTP. Mientras que HTTP es
+                        transferencia de archivos, REST se basa en la&nbsp;<strong>transferencia de recursos</strong>.
+                    </p>
+                    <h3><strong>En qué casos sí conviene usar REST:</strong></h3>
+                    <p>Conviene usarlo cuando las interacciones son simples, dónde lo que queremos hacer son las
+                        operaciones básicas de crear un recurso, quitar recursos o modificarlos. También cuando los
+                        recursos de hardware son limitados, por que como es muy cercano al HTTP no hay más que
+                        necesitemos instalar.</p>
+                    <h3>C<strong>uando no conviene usar REST</strong>:</h3>
+                    <p>Cuando las interacciones son un poco más complejas, es decir necesitamos que el servidor aporte
+                        más lógica, ejemplo: la validación de algún documento.</p>
+                    <h2>Cómo funciona REST</h2>
+                    <p>REST es un conjunto de principios que definen la forma en que se deben crear, leer, actualizar y
+                        eliminar los datos. Es una arquitectura conocida como&nbsp;<strong>cliente-servidor</strong>, en
+                        la que el servidor y el cliente actúan de forma independiente, siempre y cuando la interfaz sea
+                        la misma al procesar una solicitud y una respuesta, que son los elementos esenciales.</p>
+                    <p><strong>El servidor expone la API REST y el cliente hace uso de ella</strong>. El servidor
+                        almacena la información y la pone a disposición del usuario, mientras que el cliente toma la
+                        información y la muestra al usuario o la utiliza para realizar posteriores peticiones de más
+                        información.</p>
+                    <figure><img
+                            src="https://static.platzi.com/media/user_upload/Captura-d336ab2e-8e2d-40a4-808a-ee3da1fbdaef-597e9e5e-eae6-4151-b617-7e145404d7ab.jpg"
+                            alt="como-funciona-rest-web-service.png"></figure>
+                    <p>REST es muy útil cuando:</p>
+                    <ul>
+                        <li>Las interacciones son simples.</li>
+                        <li>Los recursos de tu hardware son limitados.</li>
+                    </ul>
+                    <p><em>Contribución creada con los aportes de: Iridian Guadalupe Carrera</em>.</p>
+                </div>
+                <h2>TRANSCRIPCION</h2>
+                <div class="Transcript-text">
+                    <p>En esta clase aprenderás exactamente qué es res i que és una pierna.</p>
+                    <p>Es tu Comencemos por la definición que fue. Pues es un acrónimo de representation </p>
+                    <p>Al usted, trance o transferencia de estados representación al No nos preocupemos mucho. </p>
+                    <p>Por qué significan esas siglas? Simplemente ten en cuenta que esto es como una pequeña capa de
+                        complejidad </p>
+                    <p>agregada http realmente muy, muy fina Lo importante Es decir, que el rey es un protocolo que se
+                    </p>
+                    <p>basa en el intercambio de recursos http usualmente se basa en el intercambio de archivos </p>
+                    <p>aquí es como que se le va un poco el nivel de infracción. </p>
+                    <p>Entonces, que es una piedra? Estuvo sencillamente es una Piqué. </p>
+                    <p>Está diseñada alrededor de los conceptos de res-. </p>
+                    <p>Cuáles son estos conceptos entonces? Básicamente. </p>
+                    <p>Se trata de hablar de recursos de, de Reis y universal Resort. </p>
+                    <p>Hay antifaz o identificadores universales de recursos y de acciones. </p>
+                    <p>Es decir, una petición Red se basa en decir cuál es el recurso sobre el que queremos realizar
+                    </p>
+                    <p>alguna acción, Cuál es la acción que queremos realizar? </p>
+                    <p>Y el rey es lo que nos permite identificar exactamente cuál es efectivamente el recurso sobre
+                    </p>
+                    <p>el que vamos a actuar de modo que una petición res- completa se basa en una URL </p>
+                    <p>en que, a diferencia del agua, es rey, incluso el dominio, el protocolo y demás y </p>
+                    <p>un verbo http Estos verbos son Güell put Touch Bilic que mapeo y a las acciones básicas de
+                        obtener un </p>
+                    <p>recurso, crear un recurso nuevo, eliminar un recurso o modificar un recurso existente </p>
+                    <p>en el servidor. Aquí me quiero detener un momento para explicar un poco mejor el </p>
+                    <p>recurso. Puede ser cualquier cosa. Realmente esto depende de un poco en la lógica de la
+                        aplicación </p>
+                    <p>Un ejemplo que me viene a la mente es el de una librería donde tales un recurso podría ser un
+                        libro </p>
+                    <p>o un autor, o tal vez un género de los libros. Esto es un ejemplo de peticiones que se podrían
+                        realizar </p>
+                    <p>aún. Servidor envía red donde, por ejemplo, hacemos el Güell Barra Books Barra </p>
+                    <p>uno. Eso estamos diciendo que queremos obtener la información del libro que se identifica con el
+                        número </p>
+                    <p>uno. El segundo ejemplo que dice Dilip Box barra cincuenta. </p>
+                    <p>Lo que estamos haciendo es solicitar el servidor que elimine de su propia base de datos el </p>
+                    <p>libro identificado con el número cincuenta. Entonces veamos cómo funciona el flujo de una
+                        petición </p>
+                    <p>red es bastante similar a lo que veíamos en una petición http pero veamos un poquito el detrás Se
+                        para </p>
+                    <p>ver la complejidad agregada. Empezamos porque un cliente realiza una petición http </p>
+                    <p>aún servidor esta petición, al igual que lo que habíamos antes, viaja tras de Internet sea </p>
+                    <p>el servidor El servidor comienza a interpretar esta petición y a generar la respuesta y </p>
+                    <p>en algún momento determina que ciertos recursos no les son propios. </p>
+                    <p>O sea, no los tiene disponibles, sino que debe solicitarse los a otros. </p>
+                    <p>Servidor más Entonces genera una nueva petición http que viaja nuevamente a través Internet sea
+                    </p>
+                    <p>a este servidor auxiliar, digamos Este servidor responde con http Y ese http vuelve </p>
+                    <p>al sabio original Esta petición que está marcada en amarillo es la que sería la petición res-
+                        propiamente </p>
+                    <p>dicha. Una vez que el servidor original tomado de esos datos que vinieron del otro servidor,
+                        continúa </p>
+                    <p>el procesamiento de su petición original, agregando esta información genera su respuesta http
+                    </p>
+                    <p>y esa respuesta viaja nuevamente hacia el cliente que hará lo que tenga que hacer con esa. </p>
+                    <p>En casos, conviene realmente utiliza el resto? Pues esta pregunta viene a cuento de Qué respuesta
+                    </p>
+                    <p>No es la única forma que se puede utilizar para el desarrollo de servicios juego. </p>
+                    <p>Existen otras Usualmente result. Conviene cuando las interacciones son simples, como el caso que
+                        mostrábamos </p>
+                    <p>donde lo que queremos hacer son las operaciones básicas de averías, recursos, quitar recursos,
+                        modificarlos </p>
+                    <p>y también viene muy bien cuando los recursos de hardware en general son limitados. </p>
+                    <p>Porque como el protocolo está tan cercano al http realmente, no hay mucho más que necesitemos
+                    </p>
+                    <p>instalar para que todo esto sea posible. Cuando no conviene utilizar Red es cuando las
+                        interacciones </p>
+                    <p>son un poco más complejas. Como decir no nos alcanza con el mero intercambio de recursos, sino
+                        que </p>
+                    <p>necesitamos que el servidor aporte más lógica. Un ejemplo que me viene a la mente sería la de
+                    </p>
+                    <p>pronto validación de algún documento. Cuando necesitamos que el servidor Laporte la lógica de
+                        validación </p>
+                    <p>sea result. Por ahí nos va a quedar un poco chico. </p>
+                    <p>Bueno, con esto hemos concluido con la parte más teórica del curso. </p>
+                    <p>A continuación. Vamos a ver. Se ha ejemplos prácticos de cómo se realizan peticiones Red y </p>
+                    <p>cómo se En. Programa en servidores. Nos vemos </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 5 de 19 - Como realizar una peticion REST e inerpretar sus resultados</h2>
+                <div class="Resources-description">
+                    <p>Utilizando el comando ‘curl’ dentro de nuestra terminal podemos realizar peticiones a cualquier
+                        sitio web, por ejemplo una API como la de <a href="https://xkcd.com/" target="_blank"
+                            rel="noopener">xkcd</a>.</p>
+                    <pre><code>curl <span class="hljs-string">https:</span><span class="hljs-comment">//xkcd.com/info.0.json</span>
+                </code></pre>
+                    <p>El anterior comando nos regresa información del API, pero de manera poco legible. para poder
+                        verlo de manera más ordenada podemos usar el siguiente comando:</p>
+                    <pre><code>curl <span class="hljs-string">https:</span><span class="hljs-comment">//xkcd.com/info.0.json | jq</span>
+                </code></pre>
+                </div>
+                <h2>TRANSCRIPCION</h2>
+                <div class="Transcript-text">
+                    <p>En esta clase vas a aprender cómo utilizar los servicios Respol que te proveen terceros.</p>
+                    <p>Vamos a empezar por entender de qué se trata el consumidor. </p>
+                    <p>Servicio ofrece Lo que vamos a ver es toda la responsabilidad que le corresponde al </p>
+                    <p>cliente, que en definitiva se trata de realizar peticiones. </p>
+                    <p>Http como las que veíamos antes y luego interpretar las respuestas http Lo importante de </p>
+                    <p>este tipo de consumo es que no necesariamente lo dispara una acción debe un humano. </p>
+                    <p>Pensemos en un ejemplo como un sistema que tiene que ser actualizado todos los días No </p>
+                    <p>Es realmente muy lógico pensar que va a haber una persona que todos los días, a las doce, la
+                        noche </p>
+                    <p>se levanta, apretó un botón para que el sistema se actualice Lo Más probable es </p>
+                    <p>que esta sea una tarea programa. Va a ver algún programita, un freak que se ejecute
+                        automáticamente </p>
+                    <p>y vas a buscar la información que necesita aún servidor la intérprete y con eso actualice su base
+                        de </p>
+                    <p>datos. Te voy a mostrar entonces ahora un ejemplo de un consumo de una IP IAI con </p>
+                    <p>uno de mis comics favoritos que es x k CD punto com. </p>
+                    <p>Empecemos por ver la página Tema Hasta entonces la página que te comentaban x k CD punto com, que
+                        es </p>
+                    <p>una página muy divertida que muestra chistes sobre programación matemática y demás. </p>
+                    <p>Y lo que tiene de interesante esta página es que Nos probé una Help y hay que podemos utilizar
+                        para </p>
+                    <p>consultar sus Commits Esta Help IAI La Podemos consultar por aquí y vamos a abrir </p>
+                    <p>la consola del navegador para poder ver lo que sucede mientras hacemos la consulta Pues </p>
+                    <p>bien lo que recibimos aquí es justamente un seis son en este caso donde tenemos toda la
+                        información </p>
+                    <p>referente al cómic que hemos solicitado, como es el número cero. </p>
+                    <p>Entonces sabemos que se publicó en el mes seis con un Con este número será la identificación el
+                    </p>
+                    <p>año dos mil diecinueve Qué más tenemos Pues aquí tenemos lo más interesante que </p>
+                    <p>es. Aquí tenemos la imagen que podemos tomar esta URL Combier la te. </p>
+                    <p>Aquí tenemos el Commit directamente, por ejemplo, para incluirlo en algún otro sitio. </p>
+                    <p>Para el siguiente ejemplo vamos a la terminal donde utilizaremos la herramienta, aseguró RL para
+                    </p>
+                    <p>hacer la misma petición que recién hicimos a través del browser. </p>
+                    <p>Aquí tengo la URL es http Dicen que recuerdas el protocolo X k CD punto com es el dominio. </p>
+                    <p>Y por último, esto es la URL final de la APIC. Estoy consultando que es info punto cero en puntos
+                    </p>
+                    <p>seis son y aquí tenemos toda la información que habíamos en el Broussard. </p>
+                    <p>Ahora puedes notar que esta información así está completa, obviamente, pero está un poco
+                        desordenada </p>
+                    <p>Vamos a tratar de verla un poco mejor y para eso utilizaré la herramienta J Cook Ahora </p>
+                    <p>Vemos que la información está presentada de forma mucho más amigable y aquí tengo la misma
+                        información </p>
+                    <p>que había obtenido antes, que es la Word RL de donde se encuentra la imagen. </p>
+                    <p>Con esta información se puedo hacer lo que quiera, por ejemplo, guardando en una base de datos en
+                    </p>
+                    <p>el siguiente ejemplo te voy a mostrar cómo se haría esto si quisiéramos hacerlo en forma
+                        automatizada </p>
+                    <p>O sea que voy a hacer es crear Unscripted que después podría ser el corrido en forma automática
+                        tantas </p>
+                    <p>veces como sea necesario. Luego ya lo habían Clear como es un es que muy sencillito. </p>
+                    <p>Voy a utilizar un editor de texto muy simple en que se el Vim Le voy a llamar X </p>
+                    <p>Can El cska CD punto php Lo primero que voy a hacer es abril Etiqueta php Y luego voy a utilizar
+                        la </p>
+                    <p>función Eco para emitir el resultado de lo que voy a buscar y para ir a buscar Esta </p>
+                    <p>información, voy a utilizar una función de PHP que se llama Faith Hill. </p>
+                    <p>Contento que lo que hace es abrir un archivo y emitir según su contenido. </p>
+                    <p>En este caso, el archivo no será un archivo que eso se atenga descargado en mi computadora, sino
+                        que </p>
+                    <p>será un agua RL de agua RL de la pieza a la que estamos llamando con esto que estoy haciendo.
+                    </p>
+                    <p>Simplemente estoy diciendo que al final de la mensaje que se va a emitir se muestre también un un
+                        enter </p>
+                    <p>para que se vea un poco mejor. Entonces aquí voy a colocar la URL y listo. </p>
+                    <p>Por. Eso escrito está terminado. Le voy a grabar y ahora para ejecutar lo voy a hacer PHP </p>
+                    <p>x k CD punto php. Y ahí vemos que auto vimos la misma información que veíamos antes nuevamente
+                    </p>
+                    <p>Si la quiero ver un poco mejor Forma Triada, voy a utilizar la herramienta J Q que </p>
+                    <p>aquí ya tenemos perfectamente lista lo que voy a hacer a continuación es tratar </p>
+                    <p>de hacer una interpretación un poco más interesante del resultado que obtuve. </p>
+                    <p>No lo voy a mostrar directamente en pantalla, sino que solamente me voy a quedar </p>
+                    <p>con la información de la imagen. Esto me va a servir. </p>
+                    <p>Por ejemplo, si yo quisiera constantemente actualizar las uvas reales de las imágenes que </p>
+                    <p>están en la piel, tonces voy a volver a mi archivo El en lugar de hacer simplemente </p>
+                    <p>un eco, voy a guardar esta información en usted, Vim. </p>
+                    <p>En fin, seis son luego voy a general, un arreglo basado en el zen que obtuve, parece Voy a
+                        utilizar </p>
+                    <p>la función seis son de Col y aquí tengo que pasar de un segundo parámetros que es Thru porque
+                    </p>
+                    <p>esta función sino le pasó ese parámetro, decodificar el mensaje como un objeto. </p>
+                    <p>Y en este caso son prefiero que van como un arreglo. </p>
+                    <p>Y lo que voy a hacer es mostrar la propiedad y emergen de los datos obtenidos. </p>
+                    <p>Como siempre voy a agregar el enter al final. Muy bien, entonces. </p>
+                    <p>Ahora veamos lo que sucede cuando ejecutó, solamente obtengo la Word RL de la imagen. </p>
+                    <p>Esta es una forma de interpretar el resultado. El consumo de huevos Service is viernes </p>
+                    <p>se basa en la utilización de alguno de los verbos http esos verbos son Güell post </p>
+                    <p>Put it Hasta El momento, todo lo que estuvimos haciendo se basaba en el verbo vet porque </p>
+                    <p>lo que estábamos haciendo era ir a buscar algún recurso y traerlo, pero también podemos atrás
+                    </p>
+                    <p>El consumo de huevos Service is Red crear recursos en el servidor utilizando el verbo post o </p>
+                    <p>modificar un recurso. Existen del servidor utilizando el oro put o eliminar un </p>
+                    <p>recurso utilizando el oro Dilip Si bien diez es el más utilizado. </p>
+                    <p>Razones obvias. Todos los demás también se pueden utilizar y donde Tags importante es que cuando
+                        utiliza </p>
+                    <p>Get toda la información que envías al servidor viaja a través de la VUE RL. </p>
+                    <p>Esto quiere decir que la información es perfectamente visible para cualquiera En </p>
+                    <p>el caso de post o en el caso de put, esa información viaja un poquito más oculta, es decir, es un
+                    </p>
+                    <p>poco más segura a continuación. Entonces te voy a mostrar un ejemplo de cómo se realiza un post
+                        utilizando </p>
+                    <p>PHP para realizar el ejemplo de pago. Necesitamos un servidor que nos permita crear un recurso.
+                    </p>
+                    <p>Eso todavía no lo tenemos hecho. Los desarrollaremos un poco más adelante. </p>
+                    <p>Pero mientras tanto, quiero que puedes ver un ejemplo de cómo se realiza un poco utilizando </p>
+                    <p>php Parece. Entonces debe mostrar un ejemplo que esa están codeado bien. </p>
+                    <p>Aquí lo que vemos es un archivo que lo que hace es generar un do Vim en un servidor. </p>
+                    <p>Tonces lo primero que hace es crear un arreglo donde se encuentra la Información </p>
+                    <p>de autenticación. O sea, el nombre de usuario y la contraseña Esa información se </p>
+                    <p>codifica en seis son para poder enviar a través de El box. </p>
+                    <p>Aquí a través de la función Cool Init se inicia una conexión hacia el servidor Push </p>
+                    <p>Add URL Es Epi. Hay.txt Sando y punto Con todo esto Aquí Lo que estamos diciendo es que queremos
+                        que </p>
+                    <p>el resultado de lo que devuelve el servidor no sea retornado aquí. </p>
+                    <p>Estamos diciendo que no nos interesa tanto verlos encabezados. </p>
+                    <p>Esta es la parte más importante donde estamos diciendo que esta petición no va a ser el realizada
+                        a </p>
+                    <p>través del verbo qeu sino a través de El Barbo Pausa Y luego estamos diciendo que dentro </p>
+                    <p>de ese de ese Push va a tener que viajar esta información que en transformamos en seis. </p>
+                    <p>Son aquí arriba. Por último configuramos algunos encabezados que son de interés para que el
+                        servidor </p>
+                    <p>sepa que le estamos enviando. Estamos enviando seis son y el tamaño ese seis son Es </p>
+                    <p>la longitud del string que corresponde a la codificación. </p>
+                    <p>Seis son de el arreglo que hicimos al comienzo y entonces al final hacemos efectivamente la
+                        ejecución </p>
+                    <p>de esta petición. O sea, envía mostra esta información al servidor y guardamos </p>
+                    <p>el resultado en esta variable Henry sol. Y con esto cerramos la conexión. </p>
+                    <p>De esta manera. Entonces se puede realizar un post a través de PHP. </p>
+                    <p>En esta clase aprendiste cómo utilizar los servicios que otros te proveen a partir la próxima
+                        clase </p>
+                    <p>aprenderás a desarrollar tus propios servicios que otros podrán consumir. </p>
+                    <p>Te veo así. </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 6 de 19 - Exponer datos a través de HTTP GET</h2>
+                <div class="Transcript-text">
+                    <p>En esta clase aprenderás a producir tus propios servicios.</p>
+                    <p>Resto Esto permitirá que otras aplicaciones puedan conectarse. </p>
+                    <p>La tusa para obtener datos que tienes en tu servidor o inclusive para incorporar nueva
+                        información. </p>
+                    <p>De lo que se trata es de desarrollar un servidor capaz de interpretar peticiones http </p>
+                    <p>y devolver respuestas http Dado que estamos apoyándonos en la arquitectura red Realmente </p>
+                    <p>hay mucho de nuestra tarea que se está resuelta por el propio Woods al ver que es toda la
+                        comunicación </p>
+                    <p>a bajo nivel. No. Esta tarea, pues consiste en interpretar correctamente lo que se nos piden y
+                    </p>
+                    <p>generar respuestas adecuadas. Usualmente estas respuestas, o más bien toda la comunicación se
+                        realiza </p>
+                    <p>a través de seis son pero recuerda HTTPS un protocolo de texto, con lo cual cualquier formato de
+                        texto </p>
+                    <p>puede ser posible utilizarse. Algunas veces también se utiliza XML Así que bien vamos </p>
+                    <p>a ver una muestra de código donde crearemos el escrito básico de una aplicación res-. </p>
+                    <p>Vamos a ver cómo generar el código para un servidor. </p>
+                    <p>Resto recuerda que el servidor res- tendrá que ser capaz de responder a los cuatro verbos http es
+                    </p>
+                    <p>decir qeu post punk y con lo cual es lo que vamos a hacer ahora mismo es crear esa </p>
+                    <p>estructura básica que permita responder a esos cuatro. </p>
+                    <p>Veros por separado. Tonces, iniciaré abriendo php y luego utilizaré un su hecho para </p>
+                    <p>determinar justamente lo que vamos a hacer en cada uno de los casos y de lo que voy a bañarme
+                        para </p>
+                    <p>saber cuál es el verbo que se utilizó. Es una variable que me probé. </p>
+                    <p>El propio entorno de PHP, que es es observar recuestas. </p>
+                    <p>Mejor Con esta variable en sus Ya puedo saber cuál es el método que se utilizó para realizar </p>
+                    <p>la petición. Estos metros pueden ser justamente que por pudor y Bilic Por las dudas. </p>
+                    <p>Voy a tomarme la precaución de poner todos más sus curas de modo de no tener problemas entre </p>
+                    <p>besos y vienen mayúscula o minúscula. HR me va a dar lo mismo entonces ir en sí </p>
+                    <p>Esto En el caso de diez Más Travel ante al y la lógica propia del Grec. </p>
+                    <p>Si estoy en el caso de post, lo mismo Lo mismo para.txt y lo mismo para militar </p>
+                    <p>Muy bien, Esta será nuestra estructura básica de nuestro servidor web le cuando </p>
+                    <p>tenemos que exponer nuestros recursos. Lo primero que debemos definir es cuáles </p>
+                    <p>serán esos recursos que vamos a mostrar el exterior. </p>
+                    <p>Ten en cuenta que cuando hablamos del recurso no hablamos exclusivamente de un elemento único.
+                    </p>
+                    <p>Una colección también puede ser un recurso para este ejemplo y los que vendrán a continuación.
+                    </p>
+                    <p>Voy a asumir que mi servidor tiene una base de datos de libros, una librería. </p>
+                    <p>Entonces lo que voy a que de hacer ahora es en principio definir cuáles son los tipos de recursos
+                        que </p>
+                    <p>van a poder ser consultables desde el exterior. Para eso voy a crear un arreglo de </p>
+                    <p>tipos de recursos que están permitidos. Voy a empezar por definir los entonces </p>
+                    <p>el primero serán los propios libros El. Segundo, serán los autores y por último, será posible
+                        consultar </p>
+                    <p>o interactuar con los géneros de estos libros. Muy bien, Ahora. </p>
+                    <p>Entonces esta es la definición interna, digamos de qué es lo que el jueves Service permite </p>
+                    <p>hacer? Lo que debemos realizar ahora es una pequeña validación para decir si el </p>
+                    <p>tipo de recurso que se nos está solicitando esta dentro de este arreglo de recursos </p>
+                    <p>posibles. Para eso voy a tomar una nueva variable que voy a asumir, que me va a hacer informada
+                    </p>
+                    <p>desde el exterior en este caso a través de la URL, con lo cual voy a utilizar La </p>
+                    <p>variable veu que tienen PHP. Y voy a decir que el parámetro visor Faith va a tener que ser alguno
+                    </p>
+                    <p>de estos que están aquí Como esa validación? Pues bastante simple. </p>
+                    <p>Voy a decir un condicional y diré que sí. Lo que me vino del de la VUE RL no pertenece a </p>
+                    <p>este rey. Esto era un error y el Bolsa Luis terminará ahí nomás. </p>
+                    <p>Tonces parece Utilizó la función y no rey que lo que hace es verificar que un elemento pertenece
+                        a </p>
+                    <p>un arreglo con lo cual ir en Si dice Usted pertenece a los al Audi CEO. </p>
+                    <p>Estáis entonces? Bueno, en este caso, utilizando las la negativa. </p>
+                    <p>Es decir, si no pertenece a la red lo esto generará un error. </p>
+                    <p>Y simplemente diré que aquí terminará el script. Aquí lo que te estoy mostrando es la consola de
+                    </p>
+                    <p>comandos. Dónde voy a levantar el servidor web para poder hacer una pequeña prueba de Como </p>
+                    <p>Efectivamente, se hace la comunicación. Osea. Vamos a utilizar El cliente que venimos usando el
+                    </p>
+                    <p>seguro RL. Pero ahora vamos a estar consultando al servidor que acabamos de crear. </p>
+                    <p>Entonces lo primero es levantar el servidor que viene incorporado con PHP. </p>
+                    <p>Eso se hace con este comando. Php de menos ese mayúscula. </p>
+                    <p>Debemos darle la dirección donde estará este servidor y en que Puerto están escuchando que </p>
+                    <p>es local Home dos puntos, ocho mil decir. La dirección es local Home, que es nuestra </p>
+                    <p>propia computadora. Ochomiles. El puerto en el que están escuchando este servidor. </p>
+                    <p>Y por último, vamos a decir cuál es el archivo que tiene que utilizarse como punto de entrada sea
+                        como </p>
+                    <p>servidor. Efectivamente, que será el Saló del punto php que es el que acabamos de crear. </p>
+                    <p>Muy bien, hay Entonces está el servidor dispuesto a escuchar conexiones? </p>
+                    <p>Entonces voy a ir a otra terminal. La otra consola. </p>
+                    <p>Dónde voy a realizar efectivamente la conexión o la consulta? </p>
+                    <p>Entonces lo primero que voy a hacer es una muy, muy sencillo. </p>
+                    <p>Con dónde voy a simplemente conectarme al servidor, obviamente al puerto ocho mil. </p>
+                    <p>Porque de otro modo no estaría haciendo al servidor que acabo de levantar. </p>
+                    <p>Y voy a colocarle el parámetro menos B para poder ver la comunicación completa. </p>
+                    <p>Nos vemos. Que sucede? Pues aquí vemos que el servidor nos devolvió un dos cientos, con lo cual
+                        está </p>
+                    <p>bien, no hay ninguna respuesta. No nos ha devuelto ni seis Sony xml ni nada, obviamente porque
+                        todavía </p>
+                    <p>no lo hemos programado eso, pero por ahora estamos viendo simplemente que las cosas medianamente
+                    </p>
+                    <p>funcionen. Veamos que pasó del dado. El servidor aquí nos dice que no ha sido un error. </p>
+                    <p>Un no utiliza en este caso, que significa una especie de advertencia. </p>
+                    <p>O sea, no es un error gravísimo, pero es algo que no está bien. </p>
+                    <p>Nos dice que hay un índice que está indefinido, que es revisor Faith. </p>
+                    <p>Entonces dice en la línea nueve le falta el resto, lo estais? </p>
+                    <p>Lo que está sucediendo en definitiva, es que la variable que se está abusando del peso Head no
+                    </p>
+                    <p>se ha definido porque porque cuando se dice la consulta no envie este parámetro por la URL,
+                        habremos </p>
+                    <p>yo diciendo Revisa usted igual Woods, por ejemplo, pues aqui nos aún dos cientos también. </p>
+                    <p>Y del lado del servidor vemos que no se ha producido ningún error, con lo cual a quizá estamos
+                        haciendo </p>
+                    <p>una consultan correcta. Bien, ahora vamos a ver entonces cómo darle un poco de utilidad a </p>
+                    <p>este código, Lo que vamos a hacer es mostrar la colección de libros a través de http </p>
+                    <p>beta. Antes de escribir ese ese código, voy a aprovechar el momento para documentar </p>
+                    <p>un poco el código que escribí antes. Es decir, voy a poner algunos comentarios, como se indica en
+                    </p>
+                    <p>el curso de buenas prácticas de escritura de código que eso mismo he estado para Platini </p>
+                    <p>está disponible para ti. Así que lo primero vamos a decir aquí definimos los recursos </p>
+                    <p>dispo libres aquí. Entonces todo este bloque serán validamos que el recurso sea </p>
+                    <p>no esté disponible mejor aquí. Entonces será efectivamente Generamos La respuesta </p>
+                    <p>Asumiendo que El pedido. Es correcto. Hoy en entonces, en este caso se va a tratar de el </p>
+                    <p>método que Touch vamos a hacerlo. Algo muy sencillo. </p>
+                    <p>Primero que nada, esta parte Goian de fino los recursos, los recursos, en mi caso serán los
+                        libros </p>
+                    <p>Y aquí vamos a hacer algo que tales en la vida real sería un poquito diferente. </p>
+                    <p>Sería los. Los libros estarían disponibles en una base de datos aquí para no complicar más el
+                        ejemplo </p>
+                    <p>Lo voy a hacer con un arreglo. Pero a los efectos de mostrar lo que es el jueves a Luis da </p>
+                    <p>exactamente lo mismo Vamos a definir entonces el arreglo de libros, que serán algo </p>
+                    <p>de este estilo. Vamos a tomar un libro, uno, que cada libro será también su propio arreglos. </p>
+                    <p>Tendrá entonces su título, como por ejemplo Lo que el viento sesión tendrá su allí </p>
+                    <p>autor, que son aire de género. Aquí pongo allí porque justamente estoy tratando de simular lo que
+                    </p>
+                    <p>sería un arreglo que podría venir de una base de datos. </p>
+                    <p>Voy a crear un par de libros más como para que tenga sentido la colección, por ejemplo. </p>
+                    <p>Pues no sé, tal vez la Iliada e uno más que sea, queremos la Iliada. </p>
+                    <p>Vamos a poner la odisea también. Muy bien. Entonces, ahora que ya tenemos la colección de libros
+                    </p>
+                    <p>dije vamos a hacer la implementación del, el más básico de los nuevos servicios, que sería el
+                        devolver </p>
+                    <p>la colección de libros. En nuestro caso, vamos a devolver la colección en formato seis. </p>
+                    <p>Son de modo que lo que va a ser el web Service es simplemente codificar Como. </p>
+                    <p>Seis son el arreglo de libros y la más Con. Estos estaría bastante completo. </p>
+                    <p>Hay un pequeño detalle que podríamos agregar que es avisar de algo que es un poco de cortesía,
+                        buenas </p>
+                    <p>prácticas también que es avisarle al cliente que le vamos a estar enviando Seis son entonces </p>
+                    <p>para lograr eso, utilizaremos la función Gerd de php y diremos que el contenta y que </p>
+                    <p>en este caso será el de la respuesta será de tipo aplicais. </p>
+                    <p>Son seis, son y muy bien con esto entonces tenemos el código listo. </p>
+                    <p>Vamos a verlo corriendo. Pues vamos a comenzar como antes levantando el servidor. </p>
+                    <p>Vamos a pasar a otra terminal donde realizaremos La petición. </p>
+                    <p>Entonces estos eran Cool HTTPS los puntos Barra barra local Home ocho mil y vamos a pedirle el
+                    </p>
+                    <p>progreso Tahir igual Woods. Vamos a empezar por esta llamada sencilla y vemos que sucede. </p>
+                    <p>Pues ahí tenemos un seis son que contiene toda nuestra colección de libros. </p>
+                    <p>Va bastante bien. Vamos a hacerlo como veíamos antes, Utilizar la herramienta J Kühn para </p>
+                    <p>que el formato sea un poquito más agradable. Ahí lo tenemos. </p>
+                    <p>Generó un seis son aceptable y utilizable. Y por último, vamos a ver qué sucede sin utilizamos
+                    </p>
+                    <p>el menos fue para ver la comunicación a nivel de los encabezados. </p>
+                    <p>Sea, voy a redireccionar la salida, como dice antes a La nada para quedarme solamente con los
+                        encabezados </p>
+                    <p>y pues aquí vemos que lo que vuelve, por ejemplo, este es uno de los encabezados que nosotros
+                        habíamos </p>
+                    <p>incluido que es Application. Seis son Pues bien, en esta clase aprendiste en las bases de </p>
+                    <p>cómo se crea un servicio. Resto. Lo que vamos a ver en la próxima clase es Como, individualizar
+                        Help </p>
+                    <p>Edit o hacia un recurso en particular y no a una colección. </p>
+                    <p>Como digo, es a esta región. Te veo así. </p>
+                </div>
+
+                <pre class="prettyprint">
+
+                    &lt?php
+
+                    // Definimos los recursos disponibles
+                    $allowedResourceTypes = [
+                        'books',
+                        'authors',
+                        'genres'
+                    ];
+                    
+                    // Validamos que el recurso este disponible
+                    $resourceType = $_GET['resource_type'];
+                    
+                    if (!in_array( $resourceType, $allowedResourceTypes )) {
+                        die;
+                    }
+                    
+                    // Defino los recursos
+                    
+                    $books = [
+                        1 => [
+                            'titulo' => 'Lo que el viento se llevo',
+                            'id_autor' => 2,
+                            'id_genero' => 2
+                        ],
+                        2 => [
+                            'titulo' => 'La Iliada',
+                            'id_autor' => 2,
+                            'id_genero' => 2
+                        ],
+                        3 => [
+                            'titulo' => 'La Odisea',
+                            'id_autor' => 2,
+                            'id_genero' => 2
+                        ]
+                    ];
+                    
+                    header( 'Content-Type: application/json');
+                    
+                    // Generamos la respuesta asumiendo que el pedido es correcto
+                    switch (strtoupper($_SERVER['REQUEST_METHOD'])) {
+                        case 'GET':
+                            echo json_encode($books);
+                            break;
+                        
+                        default:
+                            break;
+                    }
+                </pre>
+
+                <pre class="prettyprint">
+
+                    > php -S localhost:8000 006-server.php
+                    > curl http://localhost:8000?resource_type=books
+                </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 7 de 19 - Exponer un recurso en particular a traves de HTTP GET</h2>
+                <h2>TRANSCRIPCION</h2>
+                <div class="Transcript-text">
+                    <p>En esta clase. Te voy a mostrar como consultar un recurso en particular.</p>
+                    <p>En la clase anterior vimos como consultar la colección entera de libros. </p>
+                    <p>Pero qué pasaría si queremos obtener la información específicamente de un libro? </p>
+                    <p>Vamos a ver cómo se escribe. Son el código. Lo primero que voy a necesitar es </p>
+                    <p>saber cuál es exactamente el libro que me están siendo requerido. </p>
+                    <p>Para eso voy a necesitar agregar una nueva variable en Vamos bien Tomar una variable que debería
+                        venir </p>
+                    <p>del Agua ARL que sería rizos allí. Que como siempre voy a asumir que viene del </p>
+                    <p>dentro. Que es que sucede ahora? La URL. Puede que tenga este parámetro. </p>
+                    <p>O puede que no lo tenga. Entonces para no generar un un error tengo que escribir </p>
+                    <p>algo como validar. Si efectivamente este Resorts allí existen. </p>
+                    <p>Para eso utilizaré la función de php a rey. Quien sí donde viven. </p>
+                    <p>Existe está aquí Dentro de la Rey de saber En caso de que eso suceda, me quedaré con su </p>
+                    <p>valor. Sin problema. En caso de que no exista, me quedaré con un valor vacío </p>
+                    <p>Esto es una sintaxis para realizar una un bit inmediato. </p>
+                    <p>Unifem línea. Entonces vamos a documentarán Aquí levantamos el Hay del recurso </p>
+                    <p>recurso ha buscado y entonces ahora ya no será tan sencillito la respuesta que deberá devolver
+                        DIR porque </p>
+                    <p>básicamente deberemos saber si queremos devolver la colección entera o un recurso en particular.
+                    </p>
+                    <p>Entonces comencemos por validar en cual de los casos estamos entonces digamos, si el </p>
+                    <p>revisor CD Vim Es vacío. O sea, no, no existen. </p>
+                    <p>Estaremos en el caso anterior, con lo cual simplemente de volveremos la colección entera y </p>
+                    <p>se terminó En. Caso contrario estaríamos en el caso en que el usuario ha se ha solicitado un </p>
+                    <p>recurso en particular. Entonces, Nuevamente, vamos a asumir que el rhythm of allí se </p>
+                    <p>corresponden con alguna de las claves de este arreglo? </p>
+                    <p>O sea, será el uno, el dos o el tres? Nos vamos a decir que sí. </p>
+                    <p>El progresos. Hay Vim que tenemos por aqui. Existe dentro del arreglo El libros. </p>
+                    <p>Entonces simplemente vamos a como siempre. Vamos a devolver una respuesta. </p>
+                    <p>Seis son vamos a hacer un seis son en Col. Pero aquí, en lugar de codificar toda </p>
+                    <p>la colección de libros solamente utilizaremos el libro solicitado. </p>
+                    <p>Pues bien ahí. Entonces tenemos el código que sea. </p>
+                    <p>Es posible devolver o bien una colección o bien un libro en particular. </p>
+                    <p>Vamos a verlo funcionando. Vamos allá. Consola para ejecutar el pedido y ver cómo se comporta el
+                        servidor </p>
+                    <p>Con este nuevo código vamos a ser usar la herramienta cool http dos puntos Barra barra yo </p>
+                    <p>que al Home C: ocho mil, sino de pregunta para introducir parámetros Rizos, Tags, igualdad Unix,
+                    </p>
+                    <p>eh? Eran personas, por eso son Hay. Vim iguala uno. </p>
+                    <p>Aquí hay un temita que hace a cómo funciona la consola Linux, que cuando aparece una en persona.
+                    </p>
+                    <p>Esto puede confundir. Para evitar todos esos problemas, vamos a en comisión el pedido y </p>
+                    <p>muy bien, ahí vemos entonces que nos devolvió un seis son que corresponde a un </p>
+                    <p>solo libro en lugar de a toda la colección. Vamos a ver los nuevamente utilizando </p>
+                    <p>el J C. Un para qué sería mejor. Y ahí lo tenemos. </p>
+                    <p>Entonces, ahora nuestros servidor sea es capaz de no solamente devolver una colección, sino
+                        también </p>
+                    <p>de volver un libro en particular. Nota Como. No tuve que reiniciar el servidor a </p>
+                    <p>pesar de haberle hecho cambios al corrió. Eso es una característica propia. </p>
+                    <p>De pie HP un detalle que tales habrás notado es que así como está hecho esto la </p>
+                    <p>URL queda con este estilo en lugar de quedar De este más. </p>
+                    <p>De esta manera, como nos propone el resto, esto se soluciona haciendo algunas configuraciones a
+                        nivel </p>
+                    <p>de bolsa. De verdad Ahora teníamos tener como lo resolvemos utilizando el jueves Albert propio
+                    </p>
+                    <p>de pie aquí te voy a mostrar la solución que utilicen para la hacer la reescritura de las uvas
+                        reales </p>
+                    <p>es decir, para transformar una URL bonita, como nos pide res- aún agua RL lo que llamaríamos útil
+                    </p>
+                    <p>que nos va a permitir procesar efectivamente los parámetros de la manera en que pensé. </p>
+                    <p>Pero necesita entonces este es un archivo al que sea menos rutas que ahora. </p>
+                    <p>Vamos a ver cómo lo vamos a ejecutar, pero leyes que sea éste y no vencer, ver el que reciba </p>
+                    <p>directamente los pedidos. Y lo que va a ser este archivo simplemente es utilizar esta </p>
+                    <p>función. Que se apruebe Max, que lo que hace es tomar todo este texto medio raro que </p>
+                    <p>corresponde a lo que se llama una expresión regular para verificar si Laurie, o sea, la URL que
+                    </p>
+                    <p>recibimos coincide con este patrón. En este caso, básicamente, el patrón lo que dice es un </p>
+                    <p>tren que empieza con Navarra tiene cualquier cosa que no sea una barra, después una barra y
+                        después </p>
+                    <p>otra en cualquier cosa que no sea una barra. Ahora vamos a ver de qué se trata. </p>
+                    <p>Suponiendo. Entonces que esto pasa? Efectivamente coincido. </p>
+                    <p>O sea, que la URL coincida con este patrón. Lo que voy a hacer es generar su mismo las </p>
+                    <p>variables del PSOE Touch utilizando los en las coincidencias. </p>
+                    <p>Y por ultimo, voy a delegar el control en el Saló del punto php para que continúe como si las
+                        llamadas </p>
+                    <p>hubiese hecho pasando le los parámetros de la por la guerra y le como veníamos viendo hasta
+                        ahora. </p>
+                    <p>Este segundo caso, has exactamente lo mismo, pero para cuando la el pedido es para una colección
+                        y </p>
+                    <p>no para un recurso en particular. Y por último, si no coincide con ninguna de las dos, el
+                        servidor </p>
+                    <p>va a responder con un error. Cuatro, cientos, cuatro. </p>
+                    <p>Va a decir No conozco lo que estás pidiendo. Vamos a ver, los pasamos a la consola entonces para
+                        ver </p>
+                    <p>cómo estos ejecuta. Lo primero que voy a tener que hacer ahora, si es volver a iniciar el
+                        servidor </p>
+                    <p>porque aquí voy a pretender que el archivo inicial no sea más el cero el punto php sino </p>
+                    <p>que sea el rutas que acabamos de ver. Entonces voy a Vuelve Inicia el servidor local </p>
+                    <p>Home ocho mil. Pero ahora le voy a poner como dije que Rutter sea el que reciben los pedidos hoy
+                    </p>
+                    <p>en y del otro lado vamos a realizar un pedido Con Kohl ochenta ITP C: Barra barra local Home Los
+                    </p>
+                    <p>puntos ocho mil. Pero aqui, justamente la idea es que en lugar de poner el sino </p>
+                    <p>de pregunta el ámbar Sant y todas esas cosas voy a hacer directamente una URL de </p>
+                    <p>este estilo barra Dotx. Y ahí vemos la colección completa. </p>
+                    <p>Y si quisiera un libro en particular diré Woods barra uno. </p>
+                    <p>Ahí tenemos un libro En esta clase aprendiste como es poner un recurso individual a </p>
+                    <p>través de http lleg. Y cómo utilizar Word reales amigables En la próxima clase. </p>
+                    <p>Vas a aprender cómo permitir a los usuarios de tú Happy crear nuevos recursos en tu servidor No
+                        te la </p>
+                    <p>pierdas. </p>
+                </div>
+                <pre class="prettyprint">
+
+                &lt?php
+
+                // Definimos los recursos disponibles
+                $allowedResourceTypes = [
+                    'books',
+                    'authors',
+                    'genres'
+                ];
+                
+                // Validamos que el recurso este disponible
+                $resourceType = $_GET['resource_type'];
+                
+                if (!in_array($resourceType, $allowedResourceTypes)) {
+                    die;
+                }
+                
+                // Defino los recursos
+                
+                $books = [
+                    1 => [
+                        'titulo' => 'Lo que el viento se llevo',
+                        'id_autor' => 2,
+                        'id_genero' => 2
+                    ],
+                    2 => [
+                        'titulo' => 'La Iliada',
+                        'id_autor' => 2,
+                        'id_genero' => 2
+                    ],
+                    3 => [
+                        'titulo' => 'La Odisea',
+                        'id_autor' => 2,
+                        'id_genero' => 2
+                    ]
+                ];
+                
+                header('Content-Type: application/json');
+                
+                // Levantamos el id del recurso buscado
+                $resourceId = array_key_exists('resource_id', $_GET) ? $_GET['resource_id'] : '';
+                echo $resourceId;
+                
+                // Generamos la respuesta asumiendo que el pedido es correcto
+                switch (strtoupper($_SERVER['REQUEST_METHOD'])) {
+                    case 'GET':
+                        if (empty($resourceId)) {
+                            echo "Empty";
+                            echo json_encode($books);
+                        } else {
+                            if (array_key_exists($resourceId, $books)) {
+                                echo json_encode($books[$resourceId]);
+                            }
+                        }
+                        break;
+                
+                    default:
+                        break;
+                }
+                
+            </pre>
+
+                <pre class="prettyprint">
+
+                &lt?php
+
+                $matches = [];
+                
+                if (preg_match('/\/([^\/]+)\/([^\/]+)/', $_SERVER["REQUEST_URI"], $matches)) {
+                    $_GET['resource_type'] = $matches[1];
+                    $_GET['resource_id'] = $matches[2];
+                
+                    error_log( print_r($matches, 1) );
+                    require '006-server.php';
+                } elseif ( preg_match('/\/([^\/]+)\/?/', $_SERVER["REQUEST_URI"], $matches) ) {
+                    $_GET['resource_type'] = $matches[1];
+                    error_log( print_r($matches, 1) );
+                
+                    require '006-server.php';
+                } else {
+                
+                    error_log('No matches');
+                    http_response_code( 404 );
+                }
+            </pre>
+                <pre class="prettyprint">
+
+                > curl http://localhost:8000/books
+                > curl http://localhost:8000/books/2
+            </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 8 de 19 - Incorporar datos a traves de HTTP POST</h2>
+
+                <div class="Transcript-text">
+                    <p>En esta clase, Vas a aprender cómo permitir otros incorporar datos a tus servidor a</p>
+                    <p>través de http paus que es el barbo que se utilizan justamente para esto. </p>
+                    <p>Entonces, viendo el código, vamos a tomar nuestros nuestros Swifts. </p>
+                    <p>Una vez que validamos todas las cosas que había que validar, vamos a concentrarnos en cómo </p>
+                    <p>resolver el caso de que el método que se nos está pidiendo sea Paus Touch. </p>
+                    <p>Entonces Lo primero que vamos a tener que hacer es bueno en Red Add vamos a asumir </p>
+                    <p>que lo que viene el del usuario viene en un formato seis son que esto, como decía antes, es una
+                        convención </p>
+                    <p>Lo definimos nosotros al momento de crear nuestro web San Luis y se lo vamos a informar a los
+                        usuarios </p>
+                    <p>para que sepan cómo comunicarse. Entonces, asumiendo que esto viene efectivamente en formato seis
+                    </p>
+                    <p>son lo primero que voy a hacer es tomar eso como texto a través de fail del contenido, que es una
+                        función </p>
+                    <p>que se habíamos visto que lo que hace es leer un archivo por completo y devolver </p>
+                    <p>su contenido. Y en este caso lo que voy a tener que hacer es una pequeña diferencia con lo que
+                        pasaría </p>
+                    <p>cuando recibimos un formulario HTM l a través de post. </p>
+                    <p>En este caso tenemos la variable post en el que es un arreglo que tiene cada uno de los campos
+                        separado </p>
+                    <p>como una clave en particular. En nuestro caso, vamos a recibir en lo que se llama el </p>
+                    <p>poste En crudo. Entonces, para poder acceder a él, tenemos que utilizar esta </p>
+                    <p>variable. Muy bien, entonces con esos ya tenemos todo el texto y lo que el usuario no se enviado,
+                    </p>
+                    <p>lo que esperamos que no se está enviando en este caso sería una estructura seis son que se </p>
+                    <p>parezca al arreglo de libros que nosotros tenemos. </p>
+                    <p>Entonces vamos a decir que simplemente lo que vamos a hacer es agregar un nuevo libro a nuestra
+                        colección </p>
+                    <p>mediante la decodificación de ese texto. Seis son que acabamos a recibir. </p>
+                    <p>Recordemos el parámetro, el fondo, parámetro tú para decir que esto se hagan en forma de arreglo.
+                    </p>
+                    <p>Y por último, una práctica bastante común es cuando esto salió bien, devolver el </p>
+                    <p>allí que se ha generado para el nuevo objeto. Entonces vamos a utilizar una función que se llama
+                        Harry </p>
+                    <p>Kiss, que nos devuelve las claves que pertenecen a un arreglo que esto también es </p>
+                    <p>un nuevo arreglo que solamente ni en las claves y de esas claves voy a pedir la </p>
+                    <p>última, con lo cual voy a hacer el conteo de cuál es la cantidad de libros que hay. </p>
+                    <p>En este caso serían cuatro, Pues había tres y se acaba. </p>
+                    <p>Abrió en uno menos uno. Para decir esto es porque las claves empiezan siempre desde desde </p>
+                    <p>cero. Entonces la última va a ser la cantidad total menos uno y listo. </p>
+                    <p>Con eso sea Permitimos que una mentira externa cree un nuevo libro. </p>
+                    <p>Obviamente que esta parte, como siempre en un caso real, lo que haría sería guardar una base de
+                        datos </p>
+                    <p>Pero para nuestro ejemplo, vamos a usar la colección de libros guardada en una raíz. </p>
+                    <p>Vamos a la consulta para ver cómo se ejecuta este nuevo pedido. </p>
+                    <p>El servidor no hace falta Oliva iniciando como seguimos. </p>
+                    <p>Vamos a ver entonces el pedido. Voy a utilizar la herramienta cool y aquí un primer tema que
+                        tengo </p>
+                    <p>que modificar es que voy a estar realizando un pedido tipo post, no tipo que como </p>
+                    <p>los que veníamos viendo hasta ahora. Para indicar eso utilizó el modificador menos X y </p>
+                    <p>co- misas Paul con esto? Este indicando que quiero hacer un pedido justamente de </p>
+                    <p>tipo pausa. Luego diré dónde está el servidor al que quiero realizar. </p>
+                    <p>Le este pedido que estará aquí en local Home ocho mil y la URL completa es a la colección de
+                        libros </p>
+                    <p>que es donde quiero abrir un elemento. Y luego tengo que indicar cual es toda la información
+                        correspondiente </p>
+                    <p>al libro que quiero agregar. Para eso voy a tener que utilizar el modificador menos de que </p>
+                    <p>recordemos aquí lo que voy a hacer es pasar un texto que ser atrapado desde el otro lado a través
+                        de </p>
+                    <p>PHP C: Barra Barra input. Como vimos entonces habrá una Comisa- simple para empezar </p>
+                    <p>a escribir. Seis son y de El título será Nuevo Libro El ahí Autor Será uno El Hay género </p>
+                    <p>será el dos Cierran seis y vamos a ejecutarlo. Muy bien. </p>
+                    <p>Desde aquí vemos que nos ha devuelto un número cuatro. </p>
+                    <p>Número cuatro corresponde al Edit y del nuevo libro creado, lo cual parece que todo salió bien.
+                    </p>
+                    <p>Ahora para el ejemplo. Voy a modificar la respuesta para que se pueda ver la colección completa.
+                    </p>
+                    <p>Entonces voy a dejar esto Ha comentado En. Vamos a hacer un eco del seis son cinco </p>
+                    <p>Blog de la colección de libros, que sería lo mismo que veíamos al comienzo con el veto. </p>
+                    <p>Entonces vamos a volver a ejecutar el pedido y aquí vemos que efectivamente se incorpora un
+                        libro. </p>
+                    <p>Cuatro con toda la información que soy pasado a mi pedido. </p>
+                    <p>En esta clase has aprendido como posibilitará otras aplicaciones, incorporar nuevos recursos a
+                    </p>
+                    <p>tu propio servidor a través de una épica y resto En la próxima clase. </p>
+                    <p>Lo que verás es como permitir a otras aplicaciones modificar recursos que sea. </p>
+                    <p>Tienes en tu servidor, te veo así. </p>
+                </div>
+
+                <pre class="prettyprint">
+
+                &lt?php
+
+                echo "Hola";
+                
+                // Definimos los recursos disponibles
+                $allowedResourceTypes = [
+                    'books',
+                    'authors',
+                    'genres'
+                ];
+                
+                echo $allowedResourceTypes;
+                
+                // Validamos que el recurso este disponible
+                $resourceType = $_GET['resource_type'];
+                
+                echo "\nresourceType\n";
+                echo $resourceType;
+                echo "\nresourceType\n";
+                
+                if (!in_array($resourceType, $allowedResourceTypes)) {
+                    die;
+                }
+                
+                // Defino los recursos
+                
+                $books = [
+                    1 => [
+                        'titulo' => 'Lo que el viento se llevo',
+                        'id_autor' => 2,
+                        'id_genero' => 2
+                    ],
+                    2 => [
+                        'titulo' => 'La Iliada',
+                        'id_autor' => 2,
+                        'id_genero' => 2
+                    ],
+                    3 => [
+                        'titulo' => 'La Odisea',
+                        'id_autor' => 2,
+                        'id_genero' => 2
+                    ]
+                ];
+                
+                header('Content-Type: application/json');
+                
+                // Levantamos el id del recurso buscado
+                $resourceId = array_key_exists('resource_id', $_GET) ? $_GET['resource_id'] : '';
+                echo $resourceId;
+                
+                // Generamos la respuesta asumiendo que el pedido es correcto
+                switch (strtoupper($_SERVER['REQUEST_METHOD'])) {
+                    case 'GET':
+                        if (empty($resourceId)) {
+                            echo "Empty";
+                            echo json_encode($books);
+                        } else {
+                            if (array_key_exists($resourceId, $books)) {
+                                echo json_encode($books[$resourceId]);
+                            }
+                        }
+                        break;
+                
+                    case 'POST':
+                        $json = file_get_contents('php://input');
+                
+                        $books[] = json_decode($json, true);
+                
+                        echo array_keys($books)[count($books) - 1 ];
+                        echo "\n";
+                        echo json_encode($books);
+                        echo "\n";
+                        break;
+                    default:
+                        break;
+                }
+                
+            </pre>
+                <pre class="prettyprint">
+
+                > curl -X 'POST' http://localhost:8000/books -d '{"titulo": "nuevo libro", "id_autor": 1, "id_genero": 2}'
+            </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 9 de 19 - Modificar datos a través de HTTP PUT</h2>
+                <div class="Resources-description">
+                    <p>Es importante recordar que el método PUT hace un reemplazo, no modificaciones puntuales. Por ello
+                        la información que enviemos a través de la petición debe ser completa.</p>
+                </div>
+                <h2>TRANSCRIPCION</h2>
+                <div class="Transcript-text">
+                    <p>es el momento de hablar de cómo permitir que otras aplicaciones modifican recursos que están en
+                        tu servidor</p>
+                    <p>Parece. Utilizaremos el método HTTPS Push con lo cual lo que haremos es volver </p>
+                    <p>a nuestro Switch y empezará escribir el código que corresponde al caso de Precisamente.txt este
+                    </p>
+                    <p>caso, lo que va a tener de particulares, que se parecerá mucho a una combinación entre </p>
+                    <p>el metro Beck y el método por gusto Veamos. Lo primero que debemos decir es validar </p>
+                    <p>que pasamos recibido un aire recurso. De otro modo no podremos saber cuál es el que tenemos que
+                        modificar </p>
+                    <p>Así que vamos a preguntar sí, el parámetro presos allí no está vacío. </p>
+                    <p>Pues allí podemos empezar a trabajar. La segunda verificación que deberíamos hacer es </p>
+                    <p>que esté allí efectivamente, corresponda con una y de un recurso que con el cual contamos. </p>
+                    <p>Entonces haremos la verificación. Le Ha reiki, exis Open solos Hay Vim En El arreglo de </p>
+                    <p>libros. Entonces Antes de continuar. Vamos a dejar un poco de documentación, con lo cual lo
+                        queremos </p>
+                    <p>es Aquí. Vemos que validamos que el recurso buscado exista. </p>
+                    <p>Entonces, suponiendo que eso efectivamente ha sucedido, vamos a tomar la entrada del usuario como
+                    </p>
+                    <p>hicimos aquí arriba se han tomas, vamos, La entrada cruda. </p>
+                    <p>Y aquí lo que hacemos es también algo bastante parecido a esto con una pequeña salvedad </p>
+                    <p>que es que aquí no nos interesa agriar un nuevo libro, sino reemplazar un libro que esa existía o
+                        se </p>
+                    <p>han El rizos allí. La clave que es recibimos será la que utilizaremos para decir cuál es el
+                        recurso </p>
+                    <p>que será reemplazado. Y por último, aquí en la Convención es que tambien devolver </p>
+                    <p>el allí del recurso. Pero para el ejemplo, vamos a hacerlo mostrando la colección completa. </p>
+                    <p>Conseguiremos aquí retornamos La colección modificada en formato seis. </p>
+                    <p>Son muy bien. Entonces vamos a verlo funcionando. </p>
+                    <p>Pues entonces ahora voy a la consola para realizar el pedido y demostrar cómo funciona esto. </p>
+                    <p>No voy a volver a iniciar el servidor porque como vimos ya no es necesario. </p>
+                    <p>Y cómo vamos a ver a continuación? El pedido que voy a realizar es muy similar al de al </p>
+                    <p>del Post. Lo que va a cambiar es que en lugar de justamente utilizar el método por utilizar </p>
+                    <p>el método Push, que si recuerdas esto, se le informó a la herramienta Cool a través del
+                        modificador </p>
+                    <p>menos X. Luego diré que la URL a la que quiero impactar será local. </p>
+                    <p>FOC dos puntos, ocho mil barras la colección de libros o se agarra a Woods y barra uno para decir
+                        que </p>
+                    <p>el recurso uno es el libro número uno. Será reemplazado por el libro que yo estoy creando en este
+                        momento </p>
+                    <p>Entonces veremos que el libro uno cambiarán por nuevo libro y todos los demás datos que tiene.
+                    </p>
+                    <p>Efectivamente, aquí vemos toda la colección que contiene tres libros y el libro que era en </p>
+                    <p>lo que viento excesivo ha cambiado por nuevo libro. </p>
+                    <p>En esta clase Has aprendido como permitir a otras aplicaciones modificar recursos que están </p>
+                    <p>en Tour servidor, Ten en cuenta que el método put hace un reemplazo. </p>
+                    <p>No se puede hacer modificaciones puntuales. Así que la información que debe ser enviada tiene que
+                        ser </p>
+                    <p>completa. En la próxima clase. Aprenderás cómo permitir a otras aplicaciones eliminar </p>
+                    <p>recursos existentes en tu servidor. No te la pierdas. </p>
+                </div>
+
+                <pre class="prettyprint">
+
+                    > curl -X 'PUT' http://localhost:8000/books/1 -d '{"titulo": "nuevo libro", "id_autor": 1, "id_genero": 2}'
+                </pre>
+
+                <pre class="prettyprint">
+
+                    case 'PUT':
+                    // validamos que el recurso buscado exista
+                    if (!empty($resourceId) && array_key_exists($resourceId, $books)) {
+            
+                        $json = file_get_contents('php://input');
+                
+                        $books[ $resourceId ] = json_decode($json, true);
+                    }
+            
+                    // echo array_keys($books)[count($books) - 1];
+                    echo "\n";
+                    echo json_encode($books);
+                    echo "\n";
+                    break;
+                </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 10 de 19 - Eliminar Datos a traves de HTTP DELETE</h2>
+                <pre class="prettyprint">
+
+            > curl -X 'DELETE' http://localhost:8000/books/1
+            </pre>
+
+                <pre class="prettyprint">
+
+                case 'DELETE':
+                if (empty($resourceId)) {
+                    echo "Empty";
+                    echo json_encode($books);
+                } else {
+                    if (array_key_exists($resourceId, $books)) {
+                        unset($books[$resourceId]);
+                        echo json_encode($books);
+                    }
+                }
+                break;
+            </pre>
+
+                <div class="Transcript-text">
+                    <p>Lo que nos falta ver. Entonces es cómo eliminar recursos a través de la épica y resto Esto</p>
+                    <p>se logra a través del método Dilip. Entonces lo que vamos a hacer es completar </p>
+                    <p>nuestro nuestro ciclos nuestro, su dicho con el código que debe responder precisamente </p>
+                    <p>al http Dilip. Entonces veamos que lo que va a suceder aquí es también bastante similar a </p>
+                    <p>lo que era el Güell de un recurso en particular. Entonces vamos a ver, voy a utilizar </p>
+                    <p>este dice que tengo por aquí, ya que será lo mismo. </p>
+                    <p>Evidentemente no podremos eliminar un recurso que no que no está presente en nuestra colección,
+                        con </p>
+                    <p>lo cual aquí vamos a validamos que el recurso existan y si efectivamente existe, lo queremos es
+                    </p>
+                    <p>eliminarlo. Como decía, en un caso real lo que haríamos sería ejecutar tales alguna sentencia
+                        tipo </p>
+                    <p>de se cuele para que el registro se eliminen La base de datos, en nuestro caso, lo vamos a
+                        simplemente </p>
+                    <p>eliminar del arreglo mediante la función Anged que lo que hace es justamente eliminar </p>
+                    <p>una clave de un arreglo. Entonces sera pues así como lo haremos. </p>
+                    <p>Vamos a poner el comentario. Y por último, lo que vemos es emitir la colección completa para
+                        verificar </p>
+                    <p>que los cambios efectivamente se han dado muy bien. </p>
+                    <p>Allí guardamos y vamos a ver entonces esto cómo se ejecuta Help Edit o que haremos </p>
+                    <p>será también similar al de put con algunas pequeñas diferencias que ahora las veremos. </p>
+                    <p>La primera, obviamente, es que utilizaremos el método le Touch La Word RL podemos </p>
+                    <p>decir que sea eliminar el libro número uno porque no? </p>
+                    <p>Y todo esto que es el seis son que estamos enviando tanto en los metros pos como pude aquí </p>
+                    <p>realmente no tiene relevancia, así que no vamos a quitar muy bien y ayudemos entonces que nos
+                    </p>
+                    <p>queda una colección de dos elementos donde el que ya ha desaparecido es precisamente el </p>
+                    <p>libro número uno. Muy bien ahora que esas aves eliminar recursos a través de la hípica y Red sea
+                    </p>
+                    <p>Conoces las cuatro operaciones básicas, recuerda. </p>
+                    <p>Para obtener recursos utiliza Head que puedes utilizado tanto para exponer colecciones de
+                        recursos como </p>
+                    <p>recursos puntuales a través de post Permites que otros usuarios puedan crear nuevos recursos en
+                        tu servidor </p>
+                    <p>a través de put Permites que se reemplace un recurso existente por uno nuevo y a través de Bilic
+                        permites </p>
+                    <p>que un recurso se eliminen Con esto. Tengo un repito, tienes la base de todo lo que hace a las el
+                    </p>
+                    <p>pie y resp-. Felicitaciones. Lo que queda por delante es ver cómo determinar más </p>
+                    <p>específicamente quién tiene acceso a cada una de las operaciones. </p>
+                    <p>Y eso lo veremos a tan partidos. La próxima, qué hacer? </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 11 de 19 - Autenticacion via HTTP</h2>
+                <pre class="prettyprint">
+
+                > curl http://mauro:1234@localhost:8000/books/1
+            </pre>
+
+                <pre class="prettyprint">
+
+                $user = array_key_exists('PHP_AUTH_USER', $_SERVER) ? $_SERVER['PHP_AUTH_USER']: '';
+                $pwd = array_key_exists('PHP_AUTH_PW', $_SERVER) ? $_SERVER['PHP_AUTH_PW']: '';
+                
+                if ($user !== 'mauro' || $pwd !== '1234') {
+                    die;
+                }
+            </pre>
+
+                <div class="Resources-description">
+                    <p>La autenticación vía HTTP tiene dos problemas:</p>
+                    <ul>
+                        <li>Es poco segura: las credenciales se envían en cada request anteponiendo el usuario y
+                            contraseña en la url, por ejemplo: <code>user:password@platzi.com</code>.</li>
+                        <li>Es ineficiente: la autenticación se debe realizar en cada request.</li>
+                    </ul>
+                </div>
+
+                <div class="Transcript-text">
+                    <p>Ahora que sea. Conoces las operaciones básicas de Red?</p>
+                    <p>Vamos a ver un poco más. Cómo se puede hacer para restringir el acceso a nuestra Hyypia ahí, ya
+                        sea </p>
+                    <p>a todas la de pie hay o algunos recursos en particular o inclusive puede restringirlo para </p>
+                    <p>algunas acciones en particular, eso sea queda a tu criterio lo que vamos a ver en </p>
+                    <p>esta clase y en las siguientes Es son diferentes métodos de autenticación. </p>
+                    <p>Y en esta clase en particular vamos a ver el más sencillo de todos, que es el de autenticación
+                    </p>
+                    <p>vía http Pues. Bien, para. Logran esta autenticación via http Vamos a servirnos de algunas </p>
+                    <p>variables que tiene el que el php nos aportan que lo que vamos a ver es, en principio Cómo </p>
+                    <p>obtener el usuario y la Password que vienen justamente de los encabezados. </p>
+                    <p>Http para lo cual vamos a decir, como siempre buscaremos si existe el encabezado dentro de todo
+                        el </p>
+                    <p>arreglo encabezados que nos da php El que estamos buscando un particular Se llaman PHP </p>
+                    <p>Touch. Yo Sabes, este es el modo en que lo codifica, php en otros lenguajes, Seguramente se
+                        llamará </p>
+                    <p>distinto, pero el concepto sigue siendo el mismo y nosotros encontraremos dentro de la red, los
+                        pesos </p>
+                    <p>Salvar. Entonces si efectivamente hay un usuario registrado en el PSOE Server, pues vamos </p>
+                    <p>a querer obtener su valor y pues si no lo hay, nada o tenemos un valor vacío. </p>
+                    <p>Lo mismo vamos a hacer respecto de la contraseña. </p>
+                    <p>Aquí la variable. Vamos a utilizar. Es cout. Puedo le CD Aquí va a ver. </p>
+                    <p>Me había confundido. Vamos a corregirlo. Chapeau Pero le y había Rivas El php </p>
+                    <p>out y o ser muy bien. En un momento demostraré como sean éstas varios le Standard inicial </p>
+                    <p>izadas, pero en principio es lo que vamos a hacer es realizar una validación que </p>
+                    <p>usualmente sería nuevamente contra una base de datos que tuviese el usuario de las </p>
+                    <p>Password aceptables y demás. En mi caso, voy a hacer un ejemplo muy sencillo que </p>
+                    <p>es Voy a poner uso aquí Password jarc odiados, o sea, directamente literales. </p>
+                    <p>Pero esto solo por el ejemplo de Por favor, no lo hagas en tu casa. </p>
+                    <p>Entonces diremos que Si no coincide el usuario o no consigue la Pascua. </p>
+                    <p>Sencillamente, a este usuario a esta petición la voy a rechazar de plano. </p>
+                    <p>O sea, voy a cortar la ejecución aquí nomás diciendo nada aquí. </p>
+                    <p>A tí no te puede mostrar absolutamente nada. Entonces veamos como esto efectivamente se ejecutan
+                        de </p>
+                    <p>la del servidor. No hay ningún cambio. Va a cambiar la forma. </p>
+                    <p>Cómo vamos a realizar la petición? Entonces Vamos a empezar por hacer la petición a nuestros
+                        servidor </p>
+                    <p>como venimos haciendo hasta ahora. Por ejemplo, para la colección de libros. </p>
+                    <p>Si solo escribo es traten de esta manera. Como podrás ver, no estoy enviando ningún tipo de
+                        ningún </p>
+                    <p>usuario y contraseña añada. Entonces lo que deberíamos ver es que nos devuelva absolutamente </p>
+                    <p>nada. Exactamente Entonces cómo hacemos para efectivamente enviar estos Estos datos Lo </p>
+                    <p>que haremos es colocar los datos de ley de autenticación dentro de la URL. </p>
+                    <p>De esta manera El bien al usuario dos puntos la contraseña y luego La a robar. </p>
+                    <p>Y ahí vemos que como son Push, una autenticación correcta podía acceder a la información que
+                        buscaba </p>
+                    <p>Vamos a verlo de nuevo en forma un poco más gráfica. </p>
+                    <p>Lo que está sucediendo es un pedido http Con la diferencia de que aparte de la URL, lo que está
+                        viajando </p>
+                    <p>es la información de autenticación. Es decir, lo que dice usted antes era el Mauro dos </p>
+                    <p>puntos. La Password, que era uno, dos, tres cuatro arroba. </p>
+                    <p>La guarde le http dos puntos Barra barra Lo calcos dos puntos ocho mil barra Dotx </p>
+                    <p>En El problema que tiene la autenticación HTTPS esque no es del todo segura porque </p>
+                    <p>bueno, para empezar, porque toda la información de autenticación viaja por la URL, con lo cual
+                        queda </p>
+                    <p>a la vista de casi cualquiera. Esto se puede solucionar mediante conexiones seguras y alguna otra
+                        herramienta </p>
+                    <p>de ese estilo. Pero aún así no es realmente el mecanismo más seguro que existe. </p>
+                    <p>Por otro lado es también bastante ineficiente porque en cada pedido debe volver a realizarse la
+                        verificación </p>
+                    <p>de que la autenticación es efectivamente varia, con lo cual En la autenticación vía http Es </p>
+                    <p>una autenticación? No? De dónde? Lo mejor Te. Invito a que en la próxima clase veamos un
+                        mecanismo </p>
+                    <p>un poco más seguro </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 12 de 19 - Autenticacion via HMAC</h2>
+                <pre class="prettyprint">
+
+                if (
+                    !array_key_exists('HTTP_X_HASH', $_SERVER) ||
+                    !array_key_exists('HTTP_X_TIMESTAMP', $_SERVER) ||
+                    !array_key_exists('HTTP_X_UID', $_SERVER)
+                ) {
+                
+                    die;
+                }
+                
+                list ($hash, $uid, $timestamp ) = [
+                    $_SERVER['HTTP_X_HASH'],
+                    $_SERVER['HTTP_X_UID'],
+                    $_SERVER['HTTP_X_TIMESTAMP'],
+                ];
+                
+                $secret = 'Sh!! No se lo cuentes a nadie!';
+                
+                $newHash = sha1($uid.$timestamp.$secret);
+                
+                if ($newHash !== $hash) {
+                    die;
+                }
+            </pre>
+
+                <pre class="prettyprint">
+
+                &lt?php
+
+                $time = time();
+                echo "Time: $time".PHP_EOL."Hash: ".sha1($argv[1].$time.'Sh!! No se lo cuentes a nadie!').PHP_EOL;
+                
+                
+            </pre>
+
+                <pre class="prettyprint">
+                php 012-generate_hash.php 1
+                curl http://localhost:8000/books -H "X-HASH: f6c0e3acc7827838cccda4ede235154045de7ea2" -H "X-UID: 1" -H "X-TIMESTAMP: 1663877343"    
+            
+            </pre>
+
+                <div class="Resources-description">
+                    <p>Para esta autenticación necesitamos 3 elementos:</p>
+                    <ul>
+                        <li>Función Hash: Difícil de romper, que sea conocida por el cliente y servidor.</li>
+                        <li>Clave secreta: Solamente la pueden saber el cliente y el servidor, será utilizada para
+                            corroborar el hash.</li>
+                        <li>UID: El id del usuario, será utilizado dentro de la función hash junto con la clave secreta
+                            y un timestamp.</li>
+                    </ul>
+                    <p>Es mucho más segura que la autenticación vía HTTP, por ello la información que se envía a través
+                        de este método no es muy sensible.</p>
+                </div>
+
+                <div class="Transcript-text">
+                    <p>vamos a ver un método autenticación algo más seguro.</p>
+                    <p>El conocido como he hecho en sí o Hans Weiss Otro y Seis son Code o código autorización basado
+                    </p>
+                    <p>en HAS de mensajes Un HAS es una función que de cómo están forma un texto en algo bastante
+                        difícil </p>
+                    <p>de de leer por un humano La idea de esta autenticación se basa en tres conceptos </p>
+                    <p>principales. Primero, una función dejas que sea justamente difícil de romper y </p>
+                    <p>que sea conocida tanto por el cliente como por el servidor. </p>
+                    <p>Luego hay una palabra secreta que también es compartida solamente por el cliente y el servidor.
+                    </p>
+                    <p>Y por último, hay datos que viajan en forma pública, como es el fraude CTO. </p>
+                    <p>Lo que sucede es que el cliente, sabiendo la función dejas y el secreto toma esa información
+                        pública </p>
+                    <p>Y con todo eso se concatenan y se arma un mensaje que será enviado El servidor El </p>
+                    <p>servidor tomas la información pública y también conoce cuál es la función. </p>
+                    <p>Deja sin y cuál es el secreto y vuelve a generar ese HAS y luego compara el recibido con el
+                        generado </p>
+                    <p>por el sí coinciden. La autenticación se produce. </p>
+                    <p>Si no coinciden, se asume que es un usuario que no está habilitado Veamos de un código Lo </p>
+                    <p>primero que vamos a hacer es eliminar el mecanismo de autenticación que veníamos </p>
+                    <p>utilizando porque no vamos a utilizar más de uno. </p>
+                    <p>Entonces, Quitemos este código Y ahora vamos a empezar por verificar que la información que
+                        recibimos </p>
+                    <p>esté mínimamente completa. Parece Vamos a pedir que el usuario nos has informado un </p>
+                    <p>HAS Una marca de tiempo Y el allí del usuario que se supone que di César. </p>
+                    <p>Entonces vamos a verificar si efectivamente tenemos todos estos datos para eso vamos a verificar
+                        que </p>
+                    <p>ciertas encabezados estén en el arreglo Encabezados que recibimos. </p>
+                    <p>Estos encabezados se suelen de notar con la letra X para decir que son encabezados No </p>
+                    <p>estándar. Entonces vamos a tener el En encabezado. </p>
+                    <p>HAS En el server es lo primero. Si cualquiera de estas verificaciones, Fasa. </p>
+                    <p>Ya sabremos que este usuario no puede ser autenticado El. </p>
+                    <p>Segundo Entonces dije es el Tags Install o marca de tiempo Y el tercero será El </p>
+                    <p>allí de usuarios. Entonces, como decía Si cualquiera de estas de estos encabezados no está
+                        presente </p>
+                    <p>en el pedido. Directamente este usuario no ser autenticado. </p>
+                    <p>Y se terminó el tema. Suponiendo que si vienen, lo que voy a hacer es bueno. </p>
+                    <p>Voy a estar aquí. Una construcción de PHP que me permite afinar muchas variables en </p>
+                    <p>una sola instrucción. Lo que voy a hacer es justamente tomar los tres encabezados y hacinados en
+                        variables </p>
+                    <p>para poder después trabajar con esos. No se dice que esto será un arreglo formado por los </p>
+                    <p>encabezados que tenemos aquí. Experiencia. Entonces el JAS No olvidamos las comillas. </p>
+                    <p>Luego colocaremos el yo ser allí. Y por último, La marca de tiempo Alarmar el alarma </p>
+                    <p>de este este arreglo De esta manera, lo que estoy haciendo es que coincida el caso </p>
+                    <p>con la variable HAS. El yo sé ahí, con la varios de Bayly y el Times tan con la variable
+                        Tayikistán </p>
+                    <p>Muy bien, Ahora. Entonces voy a poner la clave secreta que solamente conoce el </p>
+                    <p>servidor y el cliente. Esto es esto es un tren que es completamente arbitrario. </p>
+                    <p>Pero lo importante es justamente que se mantenga secreto y que lo conozca tanto el cliente como
+                        el servidor </p>
+                    <p>Y ahora? Entonces voy a generar mi propia versión del HAS. </p>
+                    <p>Utilizando esta función, deja sin que se la SHA uno es una función de criptografía bastante </p>
+                    <p>fuerte y lo que va a hacer simplemente es concatenar todas las cosas que me pasó el el usuario
+                        más </p>
+                    <p>la clave secreta. Bien, de esta manera entonces se general El nuevo hojas y ahora lo que
+                        corresponde </p>
+                    <p>es comparar el JAS queso recibe el usuario con el que eso mismo género y en caso de que no
+                        coincidan </p>
+                    <p>simplemente el usuario no será capaz de autenticar se en mi aplicación vamos a verlo funcionando.
+                    </p>
+                    <p>Para realizar este ejemplo Voy a valerme de un escrito auxiliar que me permitirá general </p>
+                    <p>de una forma bastante sencilla los gases que necesito. </p>
+                    <p>Entonces lo que hace es The Script es simplemente tomar una marca de tiempo Un argumento que será
+                        el </p>
+                    <p>aire y usuario que quiere autenticar se y la Chaves secreta y generar es dejas que eso necesito.
+                    </p>
+                    <p>De modo que lo primero que voy a hacer será llamar a este escrib pasando le como </p>
+                    <p>parámetro mi allí usuario que es uno. Entonces este este me dice o que hay. </p>
+                    <p>Este es el JAS que debes informar y esto es muy importante. </p>
+                    <p>También me dices la marca de tiempo porque recordemos que debo informar del servidor todos </p>
+                    <p>estos datos. Entonces la llamada será así Para empezar la misma de siempre. </p>
+                    <p>Seguro. RL HTTPS C: Barra barra local Home Los puntos ocho mil Más Rawood Y aquí es donde tengo
+                        que </p>
+                    <p>empezarán. Pasarlos. Encabezados Para Eso utilizó el modificador menos H Donde </p>
+                    <p>Direm por ejemplo, el X HAS es Este que están y lo lo lo tendremos el equis Cuál </p>
+                    <p>Vim es el uno El menos H equis Tags Install Será esta marca de tiempo perfecto de </p>
+                    <p>esa manera. Entonces me autenticado y he logrado la información que buscaba. </p>
+                    <p>Veamos qué sucedería si alteró cualquiera estos datos Precisamente. </p>
+                    <p>La vi. Me rechaza porque no estoy producir Produciendo una autenticación varia En </p>
+                    <p>esta clase Has aprendido un mecanismo autenticación bastante más seguro que existe y piadosos que
+                    </p>
+                    <p>es hecho en sí. Este mecanismo se utiliza cuando la información que están del lado y la Help IAI
+                        es </p>
+                    <p>segura. Pero todavía por ahí no es tan segura como información del Pentágono. </p>
+                    <p>Cosas por el estilo Una. Aclaración El archivo del cierre, Hijas. </p>
+                    <p>Lo vas a encontrar junto con dos antiguos de la clase Por. </p>
+                    <p>Último, Quiero invitarte a la próxima clase donde veremos el mecanismo autenticación más seguro
+                        que </p>
+                    <p>se conoce No te la pierdas </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 13 de 19 - Autenticacion via access tokens</h2>
+                <pre class="prettyprint">
+
+                header( 'Content-Type: application/json' );
+
+                if ( !array_key_exists( 'HTTP_X_TOKEN', $_SERVER ) ) {
+                
+                    die;
+                }
+                
+                $url = 'http://localhost:8001';
+                
+                $ch = curl_init( $url );
+                curl_setopt( $ch, CURLOPT_HTTPHEADER, [
+                    "X-Token: {$_SERVER['HTTP_X_TOKEN']}",
+                ]);
+                curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+                $ret = curl_exec( $ch );
+                
+                // if ( curl_errno($ch) != 0 ) {
+                // 	die ( curl_error($ch) );
+                // }
+                
+                if ( $ret !== 'true' ) {
+                    // http_response_code( 403 );
+                
+                    die;
+                }
+            </pre>
+
+                <pre class="prettyprint">
+
+                &lt?php
+
+                $method = strtoupper( $_SERVER['REQUEST_METHOD'] );
+                
+                $token = "5d0937455b6744.68357201";
+                
+                if ( $method === 'POST' ) {
+                    if ( !array_key_exists( 'HTTP_X_CLIENT_ID', $_SERVER ) || !array_key_exists( 'HTTP_X_SECRET', $_SERVER ) ) {
+                        http_response_code( 400 );
+                
+                        die( 'Faltan parametros' );
+                    }
+                
+                    $clientId = $_SERVER['HTTP_X_CLIENT_ID'];
+                    $secret = $_SERVER['HTTP_X_SECRET'];
+                
+                    if ( $clientId !== '1' || $secret !== 'SuperSecreto!' ) {
+                        http_response_code( 403 );
+                
+                        die ( "No autorizado");
+                    }
+                    echo "\n";
+                    echo "\n";
+                    echo "$token";
+                    echo "\n";
+                    echo "\n";
+                } elseif ( $method === 'GET' ) {
+                    if ( !array_key_exists( 'HTTP_X_TOKEN', $_SERVER ) ) {
+                        http_response_code( 400 );
+                
+                        die ( 'Faltan parametros' );
+                    }
+                
+                    if ( $_SERVER['HTTP_X_TOKEN'] == $token ) {
+                        echo 'true';
+                    } else {
+                        echo 'false';
+                    }
+                } else {
+                    echo 'false';
+                }
+                
+                
+                // curl http://localhost:8001 -X 'POST' -H 'X-Client-Id: 1' -H 'X-Secret: SuperSecreto!'
+                // 1115d0937455b6744.68357201
+                // 5d0937455b6744.68357201
+                // curl http://localhost:8000/books -H 'X-Token: 5d0937455b6744.68357201'
+                
+                
+            </pre>
+
+                <pre class="prettyprint">
+                php -S localhost:8001 013-auth_server.php
+                curl http://localhost:8001 -X 'POST' -H 'X-Client-Id: 1' -H 'X-Secret: SuperSecreto!' 
+                curl http://localhost:8000/books -H 'X-Token: 5d0937455b6744.68357201'   
+            </pre>
+
+                <div class="Resources-description">
+                    <p>Está forma es la más compleja de todas, pero también es la forma más segura utilizada para
+                        información muy sensible. El servidor al que le van a hacer las consultas se va a partir en dos:
+                    </p>
+                    <ul>
+                        <li>Uno se va a encargar específicamente de la autenticación.</li>
+                        <li>El otro se va a encargar de desplegar los recursos de la API.</li>
+                    </ul>
+                    <p>El flujo de la petición es la siguiente:</p>
+                    <ol>
+                        <li>Nuestro usuario hace una petición al servidor de autenticación para pedir un token.</li>
+                        <li>El servidor le devuelve el token.</li>
+                        <li>El usuario hace una petición al servidor para pedir recursos de la API.</li>
+                        <li>El servidor con los recursos hace una petición al servidor de autenticación para verificar
+                            que el token sea válido.</li>
+                        <li>Una vez verificado el token, el servidor le devuelve los recursos al cliente.</li>
+                    </ol>
+                </div>
+
+                <div class="Transcript-text">
+                    <p>El. Último mecanismo de autenticación que vamos a estudiar es el basado en Access</p>
+                    <p>Touch. Canso. Toque este acceso, lo que se dice accesos temporales. </p>
+                    <p>Este es el más complejo de todos. Y aquí lo que sucede es que aparece un nuevo actor en escena
+                        que </p>
+                    <p>lo que sucede es que El servidor al que le vamos a hacer las consultas sean realidad. </p>
+                    <p>Se va como aquí. A partir en dos tendremos un servidor que se encargará específicamente </p>
+                    <p>la autenticación y otros servidor, que será el que tendrá efectivamente los recursos a </p>
+                    <p>los que queremos acceder. De modo que el flujo de trabajo será el siguiente Para </p>
+                    <p>empezar. El cliente se registrará en El Salvador la autenticación de alguna otra manera queda
+                    </p>
+                    <p>por fuera de de este flujo. Con eso obtendrá una y alguna clave secreta. </p>
+                    <p>Entonces lo primero que realiza del cliente cuando quiere hacer un recurso disponible </p>
+                    <p>en el servidor de recursos será solicitar ese acceso al servidor de autenticación. </p>
+                    <p>De esta manera, enviar a un pedido para obtener un acceso temporal informando sus credenciales Si
+                    </p>
+                    <p>Las credenciales son válidas. El servidor de autenticación responderá con un acceso con </p>
+                    <p>ese acceso. El servidor que quiere acceder al servidor Slash Recursos realizará </p>
+                    <p>su pedido informando cuál es el toque en que le ha sido concedido El el servidor los recursos.
+                    </p>
+                    <p>Al recibir ese pedido, lo primero que realizará es una petición al servidor de autenticación para
+                    </p>
+                    <p>verificar que ese acceso efectivamente sea un acceso válido Si. </p>
+                    <p>Eso sucede en El servidor de autenticación le dirá que es correcto y en ese momento el servidor
+                        de recursos </p>
+                    <p>emitirá la respuesta que se estaba buscando. Es un poco más complejo y requiere </p>
+                    <p>de varias partes coordinadas. Vamos a verlo en el código. </p>
+                    <p>Lo primero que vamos a ver es cómo funciona el servidor de autenticación, que es </p>
+                    <p>un elemento un poco extraño y vamos a lo que veníamos haciendo. </p>
+                    <p>Pero básicamente se trata de un nuevo servidor que también funciona bajo la arquitectura Respol
+                        que </p>
+                    <p>tienen dos posibilidades Cuando reciba un pedido de tipo post, lo que va a hacer es verificar
+                    </p>
+                    <p>o sea, validar, que las creencias recibidas sean válidas y En. </p>
+                    <p>Tal caso va a responder con justamente un token generado de una forma segura, como en este caso
+                        estamos </p>
+                    <p>generando el toque utilizando la función de intención SHA uno Este toquen deberá </p>
+                    <p>ser almacén en una base de datos y demás. Y sobre todo, deberá hacer Deberá tiene una caducidad
+                        en </p>
+                    <p>el tiempo. En nuestro caso lo vamos a hacer así para simplificar el ejemplo. </p>
+                    <p>Luego este servidor también tendrán la posibilidad de recibir pedidos Yaved. </p>
+                    <p>Estos pedidos serán solicitudes de invalidación de se tocan. </p>
+                    <p>Entonces lo que se realizará es una verificación del encabezado. </p>
+                    <p>O sea, el toque en que se le ha pasado contra los toques varios. </p>
+                    <p>En nuestro caso se será un único. Tocan, pero nuevamente Lo querían servidor real. </p>
+                    <p>Serían verificar en su base de datos de toques para validar que, efectivamente, este Touch bien
+                        que </p>
+                    <p>le están ofreciendo es todavía válido y de volver a una respuesta en seis son que </p>
+                    <p>será un tru si el acceso es valió o un folk. En caso de que el token sea inválido </p>
+                    <p>Debian. Pasemos entonces a nuestros servidor. Aquí lo que vamos a hacer es cambiar </p>
+                    <p>Este acceso que veníamos utilizando antes de HM hace por el mecanismo bastante más elaborado de
+                    </p>
+                    <p>comunicación vía Add se estado que nos vamos a empezar por remover el Código viejo y </p>
+                    <p>pues aquí lo primero que vamos a verificar es si el propio servidor ha recibido un token del </p>
+                    <p>cliente Si. Esto no sucedió. Simplemente vamos a decir que el cliente no está autenticado Muy
+                    </p>
+                    <p>bien. Una vez que efectivamente se ha recibido en este Touch que debemos hacerlo </p>
+                    <p>Validar por el servidor reivindicación. Entonces, en este caso, la URL donde </p>
+                    <p>va estar escuchando este servidor. Autenticación será esta Pero? </p>
+                    <p>Obviamente podría ser cualquier otra. Creo que voy a hacer ahora. </p>
+                    <p>Entonces es ejecutar una llamada vía cool al servidor reivindicación para que me </p>
+                    <p>permitan validar este tocan? O más bien, para que me diga si él toquen, eso no es válido. </p>
+                    <p>Entonces lo primero es inicial izar las llamada mediante la función cool Init. </p>
+                    <p>Luego voy a informarle el encabezado, o sea, él tocan que quiero validar. </p>
+                    <p>Con la función set of u opción sea. Voy a configurar una opción de la semana cool que </p>
+                    <p>esto antes en la línea y comandos lo hacíamos mediante el modificador menos H. </p>
+                    <p>Aquí se hace de esta manera. Y aquí vamos a pasar un arreglo de encabezados. </p>
+                    <p>Nuestro caso lo que queremos hacer es obtener El toquen que nos ha sido informado </p>
+                    <p>mediante el pedido. Bien, luego lo que vamos a hacer es se tiene otra opción, que es </p>
+                    <p>la que nos permitirá obtener el resultado de lo que él servidor nos está devolviendo. </p>
+                    <p>Recordemos que en este caso es el servidor al que nosotros estamos llamando. </p>
+                    <p>Está haciendo otros llamado al servidor de autenticación. </p>
+                    <p>Entonces esto School of reto n François y vamos a decirle que esto sea Trump En </p>
+                    <p>Bueno, por ultimo vamos a realizar la llamada y bueno, ahora si lo que debemos hacer es </p>
+                    <p>verificar si el resultado que nos ha dado el servidor es o no es tu como estos. </p>
+                    <p>Recordemos, es simplemente un texto. Es un seis son pero este CTO hecho debo compararlo </p>
+                    <p>contra un fin tú y decir si esto no es cierto, simplemente decidiré que el usuario no </p>
+                    <p>ha sido correctamente autenticado. Entonces vamos a verlo funcionando. </p>
+                    <p>Para este ejemplo. Voy a tener que levantar esa no un servidor vecino. </p>
+                    <p>Dos un servidor, que es el de recursos, que es el que veníamos usando siempre en el puerto
+                        ochenta </p>
+                    <p>Y voy a necesitar Otros servidor que sea el servidor de autenticación que como veíamos antes, vas
+                        tener </p>
+                    <p>que estar escuchando en el puerto ocho mil uno. Bien, pues entonces lo primero que voy a tener
+                        que </p>
+                    <p>hacer es solicitar al servidor de autenticación, un toque en varió. </p>
+                    <p>Entonces vamos a realizar un pedido a http dos puntos Barra barra local Home dos </p>
+                    <p>puntos ocho mil uno. Recordemos que este es el puerto en el que está escuchando el </p>
+                    <p>servidor de autenticación. Voy a hacer un pedido de tipo Push porque es lo que quiere justamente
+                        es </p>
+                    <p>crear un nuevo recurso. El recurso en este caso es el toque en Y le voy a informar toda </p>
+                    <p>mi información de autenticación mediante encabezados como ser El X. </p>
+                    <p>Claven taichi, que será el uno en mi caso. Eh, El equis. </p>
+                    <p>Sí, que que será superado. Secreto. Muy bien, entonces Ahora todo este string de enorme es </p>
+                    <p>el toque en que eso tengo. Entonces ahora lo que quiero hacer es general. </p>
+                    <p>Una segunda llamada, ahora sí, hacia el servidor de recursos que están en ocho mil, donde lo </p>
+                    <p>que quiero es, como siempre que me de la colección de libros. </p>
+                    <p>Y para esto voy a informar de que el toque en que estoy utilizando para autenticar me es </p>
+                    <p>el que me ha dado el servidor de autenticación. Entonces me voy a copiar y ahí </p>
+                    <p>vemos como efectivamente obtuvo el resultado que buscaba Y. </p>
+                    <p>Qué pasaría si pongo un toque en incorrecto, simplemente no tengo nada. </p>
+                    <p>De este modo vemos cómo funciona el mecanismo de autenticación basado en Touch Cans. </p>
+                    <p>Muy bien. Con esto Conclusión nuestro estudio de los mecanismos de autenticación. </p>
+                    <p>De pie, el juez. Hemos visto desde un mecanismo muy sencillo como hecho tipi hasta </p>
+                    <p>el mecanismo más complejo que es Access Touch. Cansa Respecto del archivo del servidor de
+                        autenticación </p>
+                    <p>Estará disponible para ti junto con los anchos. Es la clase. </p>
+                    <p>Y en la clase próxima hablaremos de cómo tratar errores en la comunicación vía el resto, No
+                        faltes </p>
+                    <p>. </p>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 14 de 19 - Manejo de errores en un servicio REST</h2>
+                <div class="Resources-description">
+                    <p>De momento nuestra API no nos indica que haya ocurrido un error, solamente nos regresa un código
+                        200 de HTTP que significa que la petición se realizó sin problemas.</p>
+                    <p>Para mejorar nuestra API añadiremos respuestas con los códigos HTTP más comunes:</p>
+                    <ul>
+                        <li>400 Bad Request: indica que el servidor no puede o no procesa la petición debido a algo que
+                            es percibido como un error del cliente</li>
+                        <li>404 Not Found: el servidor no encuentra el recurso solicitado.</li>
+                        <li>500 Internal Server Error: la petición no pudo procesarse por un error del servidor.</li>
+                    </ul>
+                </div>
+
+                <div class="Transcript-text">
+                    <p>Hasta. Ahora vivimos trabajando bajo el supuesto de que todos siempre sale bien.</p>
+                    <p>Sin embargo en la vida real las cosas no siempre son así. </p>
+                    <p>Qué puede pasar. En el caso de la comunicación res- Touch. </p>
+                    <p>Pues simplemente puede ser que el servidor no sea accesible porque ésta ha caído porque el agua
+                        real </p>
+                    <p>es incorrecta. Puede ser que el recurso específicos están buscando ya no esté disponible para
+                        nosotros </p>
+                    <p>Puede ser que no tengas permiso suficientes para ejecutar una acción En caso de que esto suceda,
+                        sería </p>
+                    <p>bueno que El Salvador no es un informe. Este tipo de información en Software Se </p>
+                    <p>trata a través de lo que se van códigos, error. Los códigos error son simplemente números que
+                    </p>
+                    <p>corresponden a ciertas situaciones que se han dado En arquitecturas más complejas. </p>
+                    <p>Como soy guapo, además, Es necesario inventar tus propios códigos. </p>
+                    <p>Error en red. Podemos valernos de los códigos de error que ya nos provee. </p>
+                    <p>Http Así que por qué no usarlos? Seguramente alguna vez te habrás topado con un </p>
+                    <p>error de tipo cuatro. Cientos cuatro. Esto significa que la página no está disponible. </p>
+                    <p>Un error de tipo quinientos Es que el servidor no puede responder en este momento Pues </p>
+                    <p>bien, todo esto es parte de la comunicación, res- y es parte de lo que tanto servidor como
+                        cliente </p>
+                    <p>deben poder interpretar. El cliente debe ser capaz de analizar los códigos. </p>
+                    <p>Error que devuelve el servidor para actuar en consecuencia. </p>
+                    <p>Y por supuesto, el servidor debe ser capaz de emitir esos códigos de error en los momentos en que
+                        sea </p>
+                    <p>necesario. Veamos un poco como esto funciona en código. </p>
+                    <p>Voy a empezar por crear un archivo que sea un cliente de un servicio web. </p>
+                    <p>Tonces vamos a Fainé Rafael. Sí, vamos a comenzar por abrir php El ahora, Dado que esto es este
+                    </p>
+                    <p>cliente va a tener que ser capaz de manejar errores. </p>
+                    <p>O sea, no me va a ser tan simple como utilizar la función. </p>
+                    <p>Fallece conden s como venía haciendo hasta ahora. </p>
+                    <p>Voy a tener que hacer la comunicación un poquito más bajo nivel utilizando el La herramienta
+                        acordó </p>
+                    <p>entonces vamos a inicial izar el cul asumiendo que la URL a la que voy a crear ser me </p>
+                    <p>va a ser prevista a través de un parámetro de añade comandos. </p>
+                    <p>Voy a quedar como siempre ver lo que está lo que está sucediendo, lo que él servidor devuelve.
+                    </p>
+                    <p>Con lo cual vamos a utilizar la opción Cool of Britton Transform Entró. </p>
+                    <p>Voy a grabar el archivo así Me da la resaltado de pienso home. </p>
+                    <p>Muy bien, Pues entonces voy a hacer a obtener la respuesta del servidor ejecutando </p>
+                    <p>el pedido Pull. Y lo que quiero obtener ahora es el código de error, sea ver qué es lo que pasó
+                        con </p>
+                    <p>esta petición. Para eso tengo una función que se llama cool, que te info para </p>
+                    <p>que le pasó el objeto cool. Y cuál es exactamente la información que quiere obtener? </p>
+                    <p>En mi caso, será Con la info http Encode. O sea el código de Ron. </p>
+                    <p>Recibido. Y luego, con esta información, son Podría hacer un Switch para decir que según </p>
+                    <p>lo que ha sucedido con el pedido que envien Antonio en consecuencia, en este caso diremos que si
+                    </p>
+                    <p>recibo un dos cientos esto quiere decir que está todo bien y pues eso salió todo bien. </p>
+                    <p>Voy a decir entonces todo bien? Sí, recibo unos mil cuatro cientos. </p>
+                    <p>Esto quiere decir que cometió un error en mi petición. </p>
+                    <p>Por ejemplo, en Villa mal. Un parámetro, Alguna cosa por el estilo. </p>
+                    <p>Entonces diré Incorrecto. Bueno, Si, en cambio recibo por ejemplo, un error </p>
+                    <p>Quinientos. Esto quiere decir que el servidor paso y así podría seguir con todos los códigos http
+                        que </p>
+                    <p>son bastantes, pero con esto nos va a alcanzar por el momento voy a ir a la consola. </p>
+                    <p>Entonces para ejecutar este archivo que acabo de General y haremos La en punto PHP y le </p>
+                    <p>vamos a pasar la dirección de un servidor que al que se le puede hacer una consulta, como por
+                        ejemplo </p>
+                    <p>el que veníamos utilizando nosotros http puntos Barra barra local hijos Los puntos ocho </p>
+                    <p>mil Y vamos a hacer una consulta valia como por ejemplo pedir la colección de libros y </p>
+                    <p>allí nos dice que salió todo bien. Ahora que sucede si hacemos una consulta inválida </p>
+                    <p>CTO otra vez nos dijo el dato Bien, como es que sucedió esto? </p>
+                    <p>Bueno, pues el problema en realidad aquí está que del lado el servidor nos están informando los
+                        errores </p>
+                    <p>debidamente. Entonces el cliente no puede hacer demasiado con eso Vamos entonces a agregar </p>
+                    <p>el manejo, errores del lado le servidor Desvelado el servidor. </p>
+                    <p>La función que vamos a utilizar para emitir estos códigos de error se llama Existi </p>
+                    <p>Pirulís Pons Code. Y vamos a poner por ejemplo, vamos a hacer una validación muy sencilla, que es
+                    </p>
+                    <p>que aquí estamos diciendo que si el tipo de recurso solicitado por el usuario no </p>
+                    <p>se encuentra dentro de los recursos disponibles, El programa simplemente se muere y </p>
+                    <p>en realidad, bueno, estos por cómo funciona php al morir sin decir nada, lo que está haciendo es
+                    </p>
+                    <p>devolver un código de los doscientos. O sea, está diciendo que salió todo bien, que es lo que
+                        habíamos </p>
+                    <p>recién. Pero nosotros sabemos que esto no es real si esta situación se da no sólo el programa de
+                        determinar </p>
+                    <p>sino que además debe emitir un mensaje de error o por lo menos un código error. </p>
+                    <p>Entonces vamos a hacen eso decir es Edit, irresponsable. </p>
+                    <p>Cuatrocientos De esta manera. Entonces el programa va a finalizar justamente emitiendo </p>
+                    <p>un código de horror diferente de doscientos. Veamos lo Este mismo pedido que hicimos recién ahora
+                    </p>
+                    <p>nos dice que hicimos un pedido incorrecto. Eso se da porque el servidor lo está informando
+                        debidamente </p>
+                    <p>Estos mismos códigos de error se pueden aplicar a todas las diferentes situaciones, como por
+                        ejemplo </p>
+                    <p>si estamos pidiendo un recurso que no existe. Veamos, lo Sin, tomamos indret </p>
+                    <p>donde aquí estamos, verificando también esto que es que el libro al que estamos buscando
+                        efectivamente </p>
+                    <p>exista. Pues vamos a hacer que si no sucede son El. </p>
+                    <p>Programa de Huelva un cuatro cientos, cuatro. Es decir, un recurso no encontrado. </p>
+                    <p>Pues entonces veamos un pedido en el cual vamos a solicitar un recurso que no existe. </p>
+                    <p>Como por ejemplo el libro número ocho. Caramba! Aquí nos ha dado. </p>
+                    <p>No ha mostrado ningún error. Veamos. Qué está sucediendo? </p>
+                    <p>Para empezar, Vale? Y vemos que el servidor está devolviendo el código error en que corresponde.
+                    </p>
+                    <p>Entonces vamos a utilizar según RL menos ve. Http dos puntos Barra barra local </p>
+                    <p>Jos los puntos ocho mil Parra Woods Barra ocho. Muy bien, aquí vemos que el servidor
+                        efectivamente </p>
+                    <p>ha devuelto un cuatro, cientos, cuatro. Con lo cual el problema no está en el servidor, sino en
+                    </p>
+                    <p>el cliente. Veamos el código del cliente. Pues aquí vemos que el problema está en que el </p>
+                    <p>codigo cuatro Cientos cuatro no está siendo manejado por el cliente. </p>
+                    <p>Simplemente Agreguemos ese caso. Recurso no encontrado que volvamos a probar Cat </p>
+                    <p>Ahora, si nos dicen recurso no encontrado En esta clase. </p>
+                    <p>Has aprendido cómo manejar errores tanto del lado del cliente como del lado del servidor sea </p>
+                    <p>tu seis días pueden ser mucho más robustas. Lo que nos queda por ver es cómo comunicar cliente
+                    </p>
+                    <p>y servidor en un caso real de aplicaciones de una sola página No te la pierdas. </p>
+                </div>
+
+                <pre class="prettyprint">
+
+                http_response_code(400);
+                die
+
+                ...
+                http_response_code(404);
+                die
+                </pre>
+                <pre class="prettyprint">
+                    &lt?php
+
+                    $ch = curl_init();
+                    curl_setopt($ch, CURLOPT_URL, $argv[1]);
+                    curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+                    $response = curl_exec($ch);
+                    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                    curl_close($ch);
+                    
+                    switch ( $httpCode ) {
+                        case 200:
+                            echo 'Respuesta correcta';
+                            break;
+                        case 400:
+                            echo 'Pedido incorrecto';
+                            break;
+                        case 404:
+                            echo 'Recurso no encontrado';
+                            break;
+                        case 500:
+                            echo 'Falló el servidor';
+                            break;
+                    }
+                </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 15 de 19 - Introducción a AJAX</h2>
+                <div class="Resources-description">
+                    <p>Es muy común tener comunicaciones con API REST al momento de tener una aplicación de una sola
+                        página o SPA, ya sea para obtener o guardar datos. Esta comunicación se realiza a través de
+                        AJAX, Asynchronous JavaScript XML. la clave es la parte de asincronismo pues el cliente no se
+                        queda bloqueado.</p>
+                </div>
+                <h2>TRANSCRIPCION</h2>
+                <div class="Transcript-text">
+                    <p>un escenario muy común de comunicación vía red pillais lo Constitución, las aplicaciones de una
+                        sola</p>
+                    <p>página. En este escenario, lo que sucede es que el cliente, o sea, el código que está ejecutando
+                    </p>
+                    <p>del lado del navegador, necesita comunicarse con él servidor para, por ejemplo, obtener más datos
+                    </p>
+                    <p>o hacer alguna actualización. Todo esto se basa en una tecnología llamada hecha </p>
+                    <p>o Sax que significa asíncrono. Ya ves que este medio, o sea XML es más Javascript </p>
+                    <p>y todo a sincrónico La clave aquí es el a sincronismo. </p>
+                    <p>Eso quiere decir que el cliente no se queda bloqueado esperando que el servidor le responda, sino
+                        que </p>
+                    <p>envía su pedido y sigue trabajando. Y cuando la información está disponible en </p>
+                    <p>ese momento se actual Veamos le un poco más gráficamente El cliente realiza un pedido HTTPS Touch
+                        y </p>
+                    <p>obtiene como respuesta HTML más algo de Java Script En ese momento es la responsabilidad del
+                        navegador </p>
+                    <p>interpretar ese HTML, dibujar la página y mediante el JavaScript y reaccionando a </p>
+                    <p>los estímulos que es eso? Por ejemplo, cuando tu haces click en algún botón o </p>
+                    <p>alguna cosa por el estilo En ese momento se dispara un nuevo pedido al servidor. </p>
+                    <p>Este es efectivamente el pedido que viajan vía hechas. </p>
+                    <p>Y lo que se supone que hay del otro lado es justamente un servidor de tipo red azul que </p>
+                    <p>responderá Usualmente con información seis amigos. </p>
+                    <p>Una vez que esa información se Help propios, JavaScript será el responsable de tomar </p>
+                    <p>esa información y actualizar la página con los nuevos datos. </p>
+                    <p>Vamos a ver un ejemplo de código. Yo que voy a hacer entonces aquí es crear un archivo. </p>
+                    <p>Esta vez será puramente html, porque lo que vamos a hacer es generar un archivo El lado cliente
+                        que </p>
+                    <p>justamente pueda ser capaz de consumir los servicios que veníamos utilizando. </p>
+                    <p>Entonces vamos a empezar por lo más básico. Clear noche. </p>
+                    <p>También les voy a guardar el archivo que se llamará en despuntó HTML. </p>
+                    <p>Así es más cómodo visualmente, porque el entorno me marca con colores las cosas. </p>
+                    <p>Estoy haciendo Pues por aquí. Voy a incorporar el código de En mucha para darle </p>
+                    <p>un poco más de visualidad. Vamos a buscarlo. Lo puedes encontrar aquí. </p>
+                    <p>Me voy a descargar directamente del Si bien, para hacerlo también más eficiente. </p>
+                    <p>Vamos a copiar, lo Debian. He. Aquí lo tenemos. </p>
+                    <p>Es que me lo voy a seguir para un poco más abajo. </p>
+                    <p>En General, esto también es una buena práctica de ponerlos los chavas que al final del yo </p>
+                    <p>la del badén. Muy bien, entonces aquí comenzaré por crear una tabla donde lo que voy a hacer con
+                        este </p>
+                    <p>HTML es mostrar una tabla de libros que pueda ser actualizable vía los huevos a Luis Es que
+                        estuvimos </p>
+                    <p>utilizando? Entonces vamos a ponerle a esto un hombre una y esto va a ser importante para en </p>
+                    <p>un rato cuando haga el JavaScript voy a referirme a todo los objetos a través de su hay Vim y
+                    </p>
+                    <p>aquí voy a usar justamente la visualización que me provee Vustra a través de la </p>
+                    <p>clase ese ese ese terrible para que que un poco más bonita tomas consagrándose encabezados donde
+                    </p>
+                    <p>lo que vamos a mostrar es simplemente los campos que tienen presente la nuestra </p>
+                    <p>teórica va CD datos de libros, Software el autor y Eloy de género. </p>
+                    <p>Y voy a dejar El El cuerpo de la de la tabla completamente vacío. </p>
+                    <p>Justamente La idea es que esto se basa cenando a a partir de lo que voy a tratar </p>
+                    <p>de los huevos Service is. Entonces vamos a crear un botón que su objetivo va a ser justamente ir
+                    </p>
+                    <p>a buscarte los libros y cenar esa tabla. Vamos a decirle que se examen, cargar libros aquí </p>
+                    <p>Voy a poner un pequeño espacio para dar mensajes mientras están sucediendo las cosas que </p>
+                    <p>voy a inicial izaron oculto porque no tengo nada que informar. </p>
+                    <p>Y aquí voy a dejar simplemente un párrafo vacío donde Posteriormente Voy a ir ingresando los
+                        mensajes </p>
+                    <p>Aquí tendremos Otro otro espacio donde poner un formulario para ingresar un nuevo libro que </p>
+                    <p>solamente será visible en el momento en que sea necesario. </p>
+                    <p>Bien, Este, entonces tendrán primero un separador solamente para sólo más visual </p>
+                    <p>Luego una tabla donde ire colocando cada uno de los elementos que quiero que tenga este
+                        formulario tenemos </p>
+                    <p>el título. Tendremos un input, que será una caja de texto para ingresar Este el </p>
+                    <p>título del libro Nombre.txt era allí también Muy bien. </p>
+                    <p>Ahora, entonces haré lo mismo para el resto de los atributos del libro. </p>
+                    <p>Te voy a poner siempre el mismo nombre y él mismo y Vim para que sea más fácil. </p>
+                    <p>Vamos a poner el último, eh? Eh, Mucho entre alguien. </p>
+                    <p>Muy bien. Y por último, lo que me queda es poner un botón que efectivamente, guarde estos
+                        elementos </p>
+                    <p>Para esto voy a hacer una única columna. Por lo tanto utilizaría una columna que </p>
+                    <p>sea un poco más grande será de dos vacíos Y pues aqui me queda ponerle el Vale Yum que </p>
+                    <p>será guardar era y será but said muy bien, entonces pues ahí lo que me resta es justamente </p>
+                    <p>incluir lo que sería el voto a PP. Esto se lo dice. </p>
+                    <p>Así que por lo menos por ahora en San deberíamos poder ver en nuestro navegador este </p>
+                    <p>HTML. Pues para ver esta pagina en funcionamiento voy a levantar nuevamente el servidor. </p>
+                    <p>Esta vez lo voy a hacer con una pequeña diferencia que es simplemente voy a levantar </p>
+                    <p>el servidor sin indicar un archivo específico que quiero que sea el punto de entrada. </p>
+                    <p>Esto simplemente porque como ya está usando un HTML, no lo necesito. </p>
+                    <p>Entonces me quedo allí y voy a dar el navegador que vamos a escribir Local Jos dos </p>
+                    <p>puntos, ocho mil Y aquí vemos la página Completamente renderizado dibujada. </p>
+                    <p>Claro que si yo o primo esto fotones. Pues no pasa absolutamente nada. </p>
+                    <p>Y eso es porque la página como podemos ver es puro HTML Lo que nos falta es incluir el JavaScript
+                        que </p>
+                    <p>vas a darle vida a todo esto? En esta clase has aprendido los conceptos principales de la
+                        comunicación </p>
+                    <p>Va que enfrenten y hemos sentado las bases para lo que vendrá a continuación, que es donde
+                        realmente </p>
+                    <p>de daremos vida al HTML que hicimos Acompáñame </p>
+                </div>
+
+                <pre class="prettyprint">
+
+                    &lt!DOCTYPE html>
+                    &lthtml lang="en">
+                    
+                    &lthead>
+                        &ltmeta charset="UTF-8">
+                        &ltmeta http-equiv="X-UA-Compatible" content="IE=edge">
+                        &ltmeta name="viewport" content="width=device-width, initial-scale=1.0">
+                        &lttitle>Document&lt/title>
+                        &lt!-- CSS only -->
+                        &ltlink href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+                            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+                    &lt/head>
+                    
+                    &ltbody>
+                    
+                        &ltdiv class="container">
+                    
+                    
+                    
+                            &lttable id="booksTable" class="table">
+                                &ltthead>
+                                    &lttr>
+                                        &ltth>Titulo&lt/th>
+                                        &ltth>Id_autor&lt/th>
+                                        &ltth>Id_Genero&lt/th>
+                                    &lt/tr>
+                                &lt/thead>
+                                &lttbody>
+                    
+                                &lt/tbody>
+                            &lt/table>
+                            &ltinput type="button" value="Cargar Libros" id="loadBooks">
+                            &ltdiv id="messages">
+                                &ltp>&lt/p>
+                            &lt/div>
+                            &lthr>
+                            &ltdiv id="bookForm">
+                                &lttable>
+                                    &lttr>
+                                        &lttd>Titulo:&lt/td>
+                                        &lttd>&ltinput type="text" name="bookTitle" id="bookTitle">&lt/td>
+                                    &lt/tr>
+                                    &lttr>
+                                        &lttd>Author:&lt/td>
+                                        &lttd>&ltinput type="text" name="bookAuthorId" id="bookAuthorId">&lt/td>
+                                    &lt/tr>
+                                    &lttr>
+                                        &lttd>Genre:&lt/td>
+                                        &lttd>&ltinput type="text" name="bookGenreId" id="bookGenreId">&lt/td>
+                                    &lt/tr>
+                                &lt/table>
+                                &ltinput type="button" value="Guardar" id="bookSave">
+                            &lt/div>
+                        &lt/div>
+                        &lt!-- JavaScript Bundle with Popper -->
+                        &ltscript src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+                            integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+                            crossorigin="anonymous">&lt/script>
+                    &lt/body>
+                    
+                    &lt/html>
+                </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 16 de 19 - Get via Ajax</h2>
+                <div class="Transcript-text">
+                    <p>en la clase anterior, Entonces vimos cómo obtener información del servidor desde</p>
+                    <p>HOY QUE viva imagen desde en chats a través de la resta y que hay que habíamos definido. </p>
+                    <p>Y lo que nos queda por ver eran como introducir nueva información Si. </p>
+                    <p>Recuerdas? Esto lo vamos a tener que realizar vía Un Método Pocs. </p>
+                    <p>Entonces vamos a ver cómo se escribe este código. </p>
+                    <p>Lo primero que realizaría es una función que estará asociada al clic en el botón but </p>
+                    <p>said entonces esto Esto tiene que quedar dentro de escribir. </p>
+                    <p>Ahí estamos. Sabemos un click Como siempre esto utilizaré una función anónima y </p>
+                    <p>lo primero que voy a hacer va a ser crear el nuevo libro. </p>
+                    <p>Y esto lo voy a hacer utilizando el formato seis son Entonces esto será el título Corresponder
+                    </p>
+                    <p>a lo que ha sido ingresado de usuario en la caja de texto Curso. </p>
+                    <p>Allí es Book Taitung y aqui utiliza le La función Val para obtener especio específicamente </p>
+                    <p>el valor que contiene esta caja. Luego haremos lo mismo con el Edit y autor. </p>
+                    <p>Y por último, tenemos lo mismo con el géneros. Muy bien, entonces aquí ya tenemos el nuevo objeto
+                    </p>
+                    <p>que queremos ingresar en nuestra va hacer. Lo que nos falta es mandar toda esta información hacia
+                    </p>
+                    <p>el servidor. Antes de hacer eso, voy a darle un mensaje al usuario para que no </p>
+                    <p>sé qué esperando en pensando que no está pasando nada. </p>
+                    <p>Tola le Del mismo modo que dice antes buscar en el primer párrafo que está dentro del divo que
+                    </p>
+                    <p>se llama mensajes me Psicosis y te colocar el texto. </p>
+                    <p>En este caso Guardando libro Voy a mostrar el mensaje y ahora sí estamos listos para hacer </p>
+                    <p>Help aux hacia el servidor Los Realizaré nuevamente utilizando el método Assaigs que </p>
+                    <p>recordemos recibe como parámetro un objeto seis son que ahora lo voy a terminar de configurar
+                        Debian </p>
+                    <p>Para empezar la URL sigue siendo la misma que utilizamos antes. </p>
+                    <p>Http C: Barra barra local Home dos puntos ocho mil Más Rawood donde recordemos tenemos nuestros
+                    </p>
+                    <p>servidor escuchando nuestros servidor pues escuchando Lo que tenemos que hacer aquí es </p>
+                    <p>indicar cuál es el método que vamos a utilizar. En nuestro caso, será pausa en </p>
+                    <p>el caso anterior, no lo necesidad especificar porque él dijo el Tags el método por defecto Eje
+                        Touch </p>
+                    <p>este parámetro La data es lo que va a viajar por el post en crudo, como veíamos en las clases
+                        anteriores </p>
+                    <p>y aquí voy a utilizar una función propia. Dejabas que que me permite transformar </p>
+                    <p>un seis son en un texto menos treinta. Creo que vamos a hacer es enviar. </p>
+                    <p>Entonces Esta para este noooooooooooooo y como siempre, vamos a crear una función para </p>
+                    <p>el caso de que todos a liar correctamente. Muy bien. </p>
+                    <p>En este caso, si esto han sucedido, lo que voy a hacer es ocultar el mensaje. </p>
+                    <p>Pues, o sea, no estoy guardando un libro y lo que voy a hacer también es aprovechar la función
+                        que </p>
+                    <p>había definido antes para agregar un libro a la tabla. </p>
+                    <p>Muy bien, vamos a guardar. Bueno, vamos a la página. </p>
+                    <p>Y ahora lo primero que hay que hacer, como siempre, es recargar, porque de otro modo el </p>
+                    <p>Chagas que que acabamos de crear no estará el cargador, Vamos entonces a cargar </p>
+                    <p>los libros y ahora nuevamente habrían nuestro libro y aquí lo vemos como se agregó </p>
+                    <p>a la tabla y bueno, es responsabilidad del servidor, pero se supone que lo ha hecho el AVE </p>
+                    <p>llegar lo efectivamente a la base de datos Así, que con estos a tenemos el panorama completo de
+                        cómo </p>
+                    <p>se realiza la comunicación fronteras, ya que a través de resta y pillais, ya sabéis, un punto
+                        importante </p>
+                    <p>que quiero mencionar es que para que la URL local Home dos puntos ocho mil, efectivamente muestre
+                    </p>
+                    <p>los contenidos de Inés punto html, Tuve que hacer un pequeño ajuste a la anchoa footer que
+                        veníamos </p>
+                    <p>utilizando. Vamos a verlo. Simplemente lo que hice fue Agregar esta excepción donde </p>
+                    <p>dije que si la Word rm es index barra y Next punto html o es barra o es nada, lo único que quiero
+                        que </p>
+                    <p>suceda es que se muestra el contenido de index punto HTML previamente a hacer las verificaciones
+                        de </p>
+                    <p>las uvas reales que veníamos utilizando. Que si recuerdas estas URE les son las que corresponden
+                        a </p>
+                    <p>los nuevos servicios, es decir, la guerra e le tipo barra Woods, que es la que estamos usando,
+                        recién </p>
+                    <p>se va a poder chequear en este punto Pero es esto. </p>
+                    <p>Simplemente tuve que hacer este cambio para que puedan convivir en el mismo servidor Tanto </p>
+                    <p>los fuegos Services que ellos, definido como el HTML, que creamos Con estas tres clases, entonces
+                    </p>
+                    <p>sea viste como armar una aplicación de una sola página utilizando ella es para la comunicación
+                        con un </p>
+                    <p>servidor, pues lo que viene por delante es ver cómo publican a tus resta Hippie hay para </p>
+                    <p>que otros la pueden acceder. Y eso es lo que veremos en la próxima placer. </p>
+                </div>
+
+                <pre class="prettyprint">
+
+                    $('#bookSave').click(function () {
+                        var newBook = {
+                            'titulo': $('#bookTitle').val(),
+                            'id_autor': $('#bookAuthorId').val(),
+                            'id_genero': $('#bookGenreId').val(),
+                        }
+                        $('#messages').first('p').text('Creando libro...')
+                        $.ajax(
+                            {
+                                'url': 'http://localhost:8000/books',
+                                'method': 'POST',
+                                'data': JSON.stringify(newBook),
+                                'success': function (data) {
+                                    $('#messages').hide()
+                                    $('#booksTable > tbody').empty();
+                                        addBook(data)
+                                }
+                            }
+                        )
+                    })
+                </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 18 de 19 - Deploy</h2>
+                <div class="Transcript-text">
+                    <p>Hasta. Ahora en venimos trabajando en el servidor local, es decir, en mi propia computadora.</p>
+                    <p>En este caso, claramente para que esto tenga sentido, la aplicación de estar publicada en </p>
+                    <p>algun servidor público de acceso público Nosotros vamos a utilizar el servidor. </p>
+                    <p>Nada un punto SH para hacer el Diplo hoy. Si no lo tienes muy claro, puedes tomar el curso de
+                        Plachy </p>
+                    <p>sobre cómo trabajar con la O. Pues bien, voy a mostrar de entonces mi configuración para </p>
+                    <p>hacer este Diplo hoy que lo único que tienen tales de interesante es el tema de las </p>
+                    <p>rutas. Aquí lo que hice fue sencillamente codificar el mismo Ruth el que habíamos hecho antes en
+                        PHP </p>
+                    <p>Lo puse en el lado donde vemos que la ruta la ruta por defecto es index HTML. </p>
+                    <p>Aquí tenemos las expresiones regulares que nos permiten acceder a los recursos. </p>
+                    <p>Y por último, que si El recurso es desconocido el agua reales desconocida El servidor de volver a
+                        un </p>
+                    <p>código cuatro cientos cuatro Eso quiere decir hubo R le incorrecta y por último, parte de la
+                        configuración </p>
+                    <p>es como tiene que tratarse los archivos punto PHP. </p>
+                    <p>Y como tiene que tratarse los antiguos punto HTML? </p>
+                    <p>Entonces veamos cómo se realiza? Efectivamente el Diplo aumente, Tan. </p>
+                    <p>Simplemente tengo que escribir en algún Y es que para el resto que aquí se comunica con el
+                        servidor </p>
+                    <p>ahora la construcción de los archivos, la especie de compilación y al final me va indicar cuál es
+                        la </p>
+                    <p>Word RL donde ha quedado publicada mi a pie o toda mi aplicación en este caso. </p>
+                    <p>Bueno, pues ahora que terminó simplemente me voy a copiar esta URL y la voy a abrir en </p>
+                    <p>mi navegador. Y aquí vemos que tenemos lo mismo que hemos hecho antes. </p>
+                    <p>Vamos a encargar los libros aquí los cargo y aquí podemos abrir un libro nuevo y </p>
+                    <p>perfecto. Ahí lo tenemos. Ha agregado Pues. Bien, ahora una pequeña aclaración que te quiero
+                        hacer </p>
+                    <p>es sobre un cambio bastante importante que tuve que hacer en el Index HTML. </p>
+                    <p>Cuál es el problema? Ya no estamos trabajando con local Home. </p>
+                    <p>Entonces la URL contra la que haremos los las llamadas a Shaq Tiene que hacer referencia al </p>
+                    <p>Nau. Cómo está esta agua? R le puede ir cambiando constantemente en lo que hice fue construirla
+                    </p>
+                    <p>mediante código Veamos la Aquí es donde se ve entonces que lo que lo que hago es tomar La </p>
+                    <p>URL original y bueno, le sacó. Hay un pequeño pedazo que seguramente será la en la barra Para
+                    </p>
+                    <p>la barra del final y le agregó la palabra Woods De esta manera se genera una Word RL que </p>
+                    <p>hace referencia. Vamos en es relativa al agua RL con la que se accedió al index punto HTML. </p>
+                    <p>Y con eso sea, estamos listos para hacerlo simplemente. </p>
+                    <p>Y Tags nuestra aplicación publicada para que cualquiera la acceda muy bien con esto. </p>
+                    <p>Entonces finalizamos lo que llamaríamos los tecnicismos de resto Help Y ahí si eres capaz de
+                        desarrollar </p>
+                    <p>una Hyppia y desde el la base, mostrar los recursos, hacer control de accesos e </p>
+                    <p>inclusiva, en publicarla en un servidor para que otros efectivamente, pueden acceder las. </p>
+                    <p>Así que ahora es el momento de hablar de las mejores pérdidas para diseñar Hyppia </p>
+                    <p>Es que todo el mundo quiere utilizar. Tenemos la próxima clase </p>
+                </div>
+
+                <pre class="prettyprint">
+
+                {
+                    "version": 2,
+                    "routes": [
+                        {
+                            "src": "/(?&lttype>[^/]+)/(?&ltid>[^/]+)",
+                            "dest": "server.php?resource_type=$type&resource_id=$id"
+                        },
+                        {
+                            "src": "/(?&lttype>[^/]+)(/)*",
+                            "dest": "server.php?resource_type=$type"
+                        },
+                        {
+                            "src": "/(.*)",
+                            "dest": "server.php",
+                            "status": 404
+                        }
+                    ],
+                    "name": "platzi-rest-api",
+                    "builds": [
+                        {
+                            "src": "*.php",
+                            "use": "@now/php"
+                        }
+                    ]
+                }
+            </pre>
+                <pre class="prettyprint">
+
+            > now
+            </pre>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="row">
+            <article class="col">
+                <h2>Sección 19 de 19 - 7 Buenas Practicas del diseño de APIs REstful</h2>
+                <div class="Resources-description">
+                    <p>Felicitaciones has llegado al final del curso, ahora conoces todos los tecnicismos para generar
+                        una API RESTful. Recuerda seguir las buenas prácticas:</p>
+                    <ol>
+                        <li>Siempre utiliza <strong>sustantivos para nombrar tus recursos</strong>.</li>
+                        <li>Añade los <strong>nombres en plural</strong> para las urls.</li>
+                        <li>Las modificaciones a recursos deben hacerse con su verbo HTTP correspondiente: POST, PUT o
+                            DELETE.</li>
+                        <li>Para devolver recursos asociados a otro recurso utiliza url que incorporen subrecursos:
+                            <code>/Autos/1/Choferes</code>.</li>
+                        <li>Navegabilidad vía vínculos.</li>
+                        <li>Cuando devuelvas colecciones deben ser filtrables, ordenables y paginables.</li>
+                        <li>Versiona tu API, añade el número de versión en la url: <code>v1/Autos</code>.</li>
+                    </ol>
+                    <p>No olvides tomar el examen para evaluar tus conocimientos y dejar una review del curso.</p>
+                </div>
+
+                <div class="Transcript-text">
+                    <p>Felicitaciones Hemos llegado al final de nuestro curso del Rey e Pia es ahora.</p>
+                    <p>Conoces todos los tecnicismos para generar Help Ibais, pero quiero compartirte. </p>
+                    <p>A continuación, una serie de buenas prácticas quedan de tus pies, algo que todo el mundo quiere
+                        utilizar </p>
+                    <p>Empecemos por el nombre y los recursos siempre utilizar sustantivos para nombrarlos. </p>
+                    <p>Es decir, casa auto, nunca verbos no correr, no saltar, no abrir, nos aclaró luego </p>
+                    <p>en las uvas rehenes siempre utilizados nombres en plural. </p>
+                    <p>No importa si se trata de colecciones o de recursos individuales, siempre la URL es en en plural.
+                    </p>
+                    <p>Por ejemplo, barra autos, barra uno, luego en la que esas operaciones que llevan alterar </p>
+                    <p>el estado, los recursos utilizan los faros. Http que corresponden, Es decir, post Put </p>
+                    <p>it It nunca View una petición tipo qeu siempre debe devolver lo mismo cuando debas </p>
+                    <p>devolver un recurso que tiene otros recursos asociados. </p>
+                    <p>Utiliza aguas reales que incorporen sus recursos, es decir, para obtener, por ejemplo, los
+                        chóferes </p>
+                    <p>del auto. Uno utiliza una huelga el equipo barra autos barra uno barra chóferes. </p>
+                    <p>Cuando tengas que también devolver un recurso que tiene otros recursos relacionados, utiliza Lynx
+                    </p>
+                    <p>dentro de la respuesta. Por ejemplo, barra autos barra uno debería incluir un campo que fuera el
+                        link </p>
+                    <p>a barra autos barra uno barra choferes de ese modo horas más sencilla la navegabilidad Cuán </p>
+                    <p>tengas que devolver colecciones Ten en cuenta que los pedidos de en poder ser filtra </p>
+                    <p>Add les orden Hables Pajín hables y debe ser posible elegir los campos que el usuario quiere
+                        obtener </p>
+                    <p>Como respuesta. Todos estos parámetros pueden ser pasados a través de parámetros </p>
+                    <p>propiamente el agua RL o a través de encabezados. </p>
+                    <p>Cómo te llamas? Como Por último Es muy importante que versiones tu Hyypia hay Es decir, lo que
+                        haga </p>
+                    <p>soy muy probablemente no sea lo que quede para toda la vida. </p>
+                    <p>Así que una forma muy simple de versionar la de pie hay es agregar una primera parte la URL que
+                        sea </p>
+                    <p>el numero de version, por ejemplo, barra de uno barra autos Varda uno Ahora si has </p>
+                    <p>terminado. Así que será un buen momento para dar un pequeño repaso de lo que aprendiste </p>
+                    <p>en este curso. Yo creo que aprendiste es que es una de pie hay Luego vimos que </p>
+                    <p>es http que Red Cómo funcionan? Vimos también cómo funciona Assaigs. </p>
+                    <p>Y por último, vimos una serie de buenas prácticas quedan de tus pies. </p>
+                    <p>Algo que todo el mundo adoren. Así que ha sido un placer tenerte conmigo. </p>
+                    <p>No olvides a realizar el examen y dejarme TUS. Vivió. </p>
+                    <p>Nos vemos pronto. </p>
+                </div>
+            </article>
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
